@@ -1,0 +1,140 @@
+.fuente_1{
+    font-family: 'Play', sans-serif;
+}
+.logo-edx{
+    width: 140px;
+    height: 60px;
+}
+.lista-horizontal li{
+    display: inline;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 10px;
+    padding-left: 0px;
+}
+.padding-superior{
+    padding-top: 20px;
+}
+.texto-footer{
+    color: #acacac;
+    font-size: 0.6875em;
+    text-align: left;
+    font-family: "Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sin-paddingleft{
+    padding-left: 0px;
+}
+.course-organization{
+    color: #000;
+    padding:10px 15px 2px 15px;
+    font-size: 14px;
+}
+.course-code{
+    color: #000;
+    padding:10px 15px 2px 15px;
+    font-size: 11px;
+}
+.course-title{
+    color: #b20610;
+    padding:10px 15px 2px 15px;
+    font-size: 18px;
+}
+.course-date{
+    color: #000;
+    padding:30px 15px 0px;
+}
+.div-cursos{
+    width: 300px;
+    height: 400px;
+}
+.thumbnail-size{
+    width: 260px;
+    height: 360px;
+}
+.thumbnail-image{
+    width: 250px;
+    height: 120px;
+    overflow: hidden;
+}
+.div-filtra{
+    padding-left: 0px; 
+}
+.boton-busca{
+    display: block;
+}
+.thumbnail-size-large{
+    width: 280px;
+    height: 360px;
+}
+.thumbnail-image-large{
+    width: 270px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.padding-container{
+    padding-bottom: 30px;
+    padding-left: 130px;
+    padding-right: 130px;
+    padding-top: 30px;
+}
+.main-banner{
+    border: 1px #000 solid;
+}
+.padding-thumbnail{
+    padding-left: -5px;
+    padding-right: -5px;
+}
+.border-thumbnail{
+    border-bottom: 3px #c9302c solid;
+}
+.border-thumbnail:hover{
+    border-bottom: 3px #acacac solid;
+    -webkit-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    -moz-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    box-shadow: rgba(0,0,0,.2) 3px 5px 5px 5px;
+}
+.hiperlink{
+    text-decoration: none;
+}
+.opacity1{
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    -o-filter: brightness(50%);
+    -ms-filter: brightness(50%);
+    filter: brightness(50%);
+    -webkit-transition: width 10s;
+    transition: width 10s;
+
+}
+.textover{
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    /*font-weight: bold;*/
+    top: 35px;
+    left: 70px;
+    border: solid #fff;
+    display: none;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.textover1{
+    z-index: 100;
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    /*font-weight: bold;*/
+    top: 35px;
+    left: 50px;
+    border: solid #fff;
+    display: none;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.img-tin:hover{
+    display: block;
+}
