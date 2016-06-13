@@ -16,7 +16,7 @@ class Controller extends BaseController
     
     public function index() {
         
-        $cursosTodos = DB::select("select *from course_name where course_id is not null and trim(course_id)!=''");
+        $cursosTodos = DB::select("select *from course_name where course_id is not null and trim(course_id)!='' and activo=1 order by inicio desc");
         
         return view('home',['cursos'=>$cursosTodos]);
     }
