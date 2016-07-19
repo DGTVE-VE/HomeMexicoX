@@ -15,3 +15,4 @@ Route::get ('/','Controller@index');
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+Route::get('MexicoX','MexicoxController@mexicox');
