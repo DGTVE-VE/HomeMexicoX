@@ -30,14 +30,14 @@ MéxicoX
                         <div class="thumbnail thumbnail-size-large center-block border-thumbnail">
                             <div class="opacity">                                
                                 <img class="thumbnail-image-large img-tin"src="{{ $curso->thumbnail }}" alt="...">
-                                <div class="textover"><h2>Aprender más</h2></div>
+                                <div class="textoAprender text-center">Aprender más</div>
                             </div>
 
                             <div class="caption">
-                                <div class="row"><div class="course-organization">{{ $curso->institucion }}</div></div>
-                                <div class="row"><div class="course-code">{{ $curso->course_id }}</div></div>
-                                <div class="row"><div class="course-title">{{ $curso->course_name }}</div></div>
-                                <div class="row"><div class="course-date">Empieza: {{ $curso->inicio }}</div></div>
+                                <div class="course-organization">{{ $curso->institucion }}</div>
+                                <div class="course-code">{{ $curso->course_id }}</div>
+                                <div class="course-title">{{ $curso->course_name }}</div>
+                                <div class="course-date">Empieza: {{ $curso->inicio }}</div>
                             </div>
                         </div>
                     </a>
