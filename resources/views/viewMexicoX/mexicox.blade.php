@@ -23,10 +23,11 @@ MéxicoX
 
         <div id="collapse{{$item}}" class="panel-collapse collapse">
             <div class="panel-body">
-                
+                <?php $i = 0 ?>
                 @foreach ($cursos as $item =>$curso)
                 @if ($clasificacion->categoria == $curso->categoria)
-                @if ($item == 0)
+                @if ($i == 0)
+                <?php $i++; ?>
                 <div class="col-md-3 padding-thumbnail div-curso active" >
                 @else
                 <div class="col-md-3 padding-thumbnail div-curso" >
