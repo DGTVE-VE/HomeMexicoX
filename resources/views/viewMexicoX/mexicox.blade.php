@@ -23,9 +23,14 @@ MéxicoX
 
         <div id="collapse{{$item}}" class="panel-collapse collapse">
             <div class="panel-body">
+                
                 @foreach ($cursos as $item =>$curso)
                 @if ($clasificacion->categoria == $curso->categoria)
+                @if ($item == 0)
+                <div class="col-md-3 padding-thumbnail div-curso active" >
+                @else
                 <div class="col-md-3 padding-thumbnail div-curso" >
+                @endif
                     <a style="text-decoration: none" href="http://mx.televisioneducativa.gob.mx/courses/{{ $curso->course_id }}/about">
                         <div class="thumbnail thumbnail-size-large center-block border-thumbnail">
                             <div class="opacity">                                
