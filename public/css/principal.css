@@ -89,7 +89,7 @@ body {
 .jumbotron{
     height: 530px;
 }
-.padding-thumbnail{
+.padding-thumbnail{    
     padding-left: -5px;
     padding-right: -5px;
 }
@@ -264,4 +264,30 @@ a:link{text-decoration:none;   }
     padding-left: 4px;
     padding-right: 4px;
 
+}
+
+.bg-image {
+    position: relative;
+}
+.bg-image img {
+    display: block;
+    width: 100%;
+    max-width: 1200px; /* corresponds to max height of 450px */
+    margin: 0 auto;
+}
+.bg-image h1 {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+}
+.nav, .main {
+    background-color: #f6f6f6;
+    text-align: center;
+}
+
+.padding-0 {
+    padding: 0;
 }

@@ -16,3 +16,4 @@ Route::get ('/','Controller@index');
 //    return view('welcome');
 //});
 Route::get('MexicoX','MexicoxController@mexicox');
+
