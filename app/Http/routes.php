@@ -17,3 +17,30 @@ Route::get ('/','Controller@index');
 //});
 Route::get('MexicoX','MexicoxController@mexicox');
 
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/admin', function (){
+
+    
+        return redirect ('courseNames');
+    
+})->middleware('auth');
+/*
+|--------------------------------------------------------------------------
+| API routes
+|--------------------------------------------------------------------------
+*/
+
+Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
+    Route::group(['prefix' => 'v1'], function () {
+        require config('infyom.laravel_generator.path.api_routes');
+    });
+});
+
+
+Route::resource('courseNames', 'CourseNameController');
+
+Route::resource('categorias', 'CategoriaController');
