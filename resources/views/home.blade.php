@@ -24,19 +24,16 @@
         <img id="the_pic" class="fit" src="{{asset('img/banner_formacion.jpg')}}" >    
 
         <div class = "container-fluid padding-container">
-
             <div class="row" >
-
                 @if(!empty($cursos))
                 @foreach($cursos as $curso)
-                <div class="col-md-3 padding-thumbnail" >
+                <div class="col-md-5 col-lg-3 col-ms-12 col-xs-12 padding-thumbnail" >
                     <a style="text-decoration: none" href="http://mexicox.gob.mx/courses/{{ $curso->course_id }}/about">
                         <div class="thumbnail thumbnail-size-large center-block border-thumbnail">
                             <div class="opacity">                                
                                 <img class="thumbnail-image-large img-tin"src="{{'http://mexicox.gob.mx/' . $curso->thumbnail }}" alt="...">
                                 <div class="textover"><h2>Aprender más</h2></div>
                             </div>
-
                             <div class="caption">
                                 <div class="course-organization">{{ $curso->institucion }}</div>
                                 <div class="course-code">{{ $curso->course_id }}</div>
@@ -47,7 +44,6 @@
                     </a>
                 </div>   
                 @endforeach
-
                 @endif
             </div>
         </div>

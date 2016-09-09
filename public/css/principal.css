@@ -76,12 +76,14 @@ body {
     overflow: hidden;
 }
 
-.padding-container{
-    padding-bottom: 30px;
-    padding-left: 130px;
-    padding-right: 130px;
-    padding-top: 30px;
-}
+/*    .padding-container{
+        padding-bottom: 30px;
+        padding-left: 130px;
+        padding-right: 130px;
+        padding-top: 30px;
+    }   */
+
+
 .main-banner{
     border: 1px #000 solid;
     width: 100%;      
@@ -93,6 +95,12 @@ body {
     padding-left: -5px;
     padding-right: -5px;
 }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+    border:2px solid red;
+}
+
 .border-thumbnail{
     border-bottom: 3px #c9302c solid;
 }
