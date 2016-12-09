@@ -183,8 +183,8 @@ body {
 }
 
 
-
-/*Menú*/
+/*
+Menú
 nav.navbar-findcond { background: #fff; border-color: #ccc; box-shadow: 0 0 2px 0 #ccc; height: 90px;}
 nav.navbar-findcond a { color: #b20610; }
 nav.navbar-findcond ul.navbar-nav a { color: black; border-style: solid; border-width: 0 0 2px 0; border-color: #fff; }
@@ -203,7 +203,7 @@ nav.navbar-findcond ul.dropdown-menu > li > a:hover { background: #b20610; color
 nav.navbar-findcond span.badge { background: #b20610; font-weight: normal; font-size: 11px; margin: 0 4px; }
 nav.navbar-findcond span.badge.new { background: rgba(255, 0, 0, 0.8); color: #fff; }
 
-/*Pie*/
+Pie
 nav.navbar-findcond1 { background: #fff;  height: 230px;}
 nav.navbar-findcond1 a { color: #b20610; }
 nav.navbar-findcond1 ul.navbar-nav a { color: black; border-style: solid; border-width: 0 0 2px 0; border-color: #fff; }
@@ -220,7 +220,7 @@ nav.navbar-findcond1 ul.dropdown-menu { border: 0; background: #fff; border-radi
 nav.navbar-findcond1 ul.dropdown-menu > li > a { color: #444; }
 nav.navbar-findcond1 ul.dropdown-menu > li > a:hover { background: #b20610; color: #fff; }
 nav.navbar-findcond1 span.badge { background: #b20610; font-weight: normal; font-size: 11px; margin: 0 4px; }
-nav.navbar-findcond1 span.badge.new { background: rgba(255, 0, 0, 0.8); color: #fff; }
+nav.navbar-findcond1 span.badge.new { background: rgba(255, 0, 0, 0.8); color: #fff; }*/
 
 .btnSesion{
     background-color: #c80000;
@@ -299,3 +299,5 @@ a:link{text-decoration:none;   }
 .padding-0 {
     padding: 0;
 }
+
+

@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8/12/2016, 11:31:31 AM
+    Author     : SMARTINEZ
+*/
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    /*margin-bottom: 60px;*/
+    
+}
+.footer {
+    position: absolute;
+    border-top: 2px solid black;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;  
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+    padding: 60px 15px 0;
+}
+.container .text-muted {
+    margin: 20px 0;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*
+ * See the Getting Started docs for more information:
+ * http://getbootstrap.com/getting-started/#support-ie10-width
+ */
+@-ms-viewport     { width: device-width; }
+@-o-viewport      { width: device-width; }
+@viewport         { width: device-width; }
+
+
+.morado{
+    background: #503e64;
+}
+.barraGuia{
+    border-bottom: 2px solid black;
+}
+.cuadro{
+    border-radius: 44px 42px 42px 42px;
+    -moz-border-radius: 44px 42px 42px 42px;
+    -webkit-border-radius: 44px 42px 42px 42px;
+    border: 1px solid #000000;
+    padding-left: 0 !important;
+    background: #503e64;
+}
+.imgCurso{
+    padding-left: 0 !important;
+}
+
+.btnCurso{
+    color: white;
+    font-size: 20px;
+}
+.foto{    
+    border-radius: 42px 0px 0px 42px;
+    -moz-border-radius: 42px 0px 0px 42px;
+    -webkit-border-radius: 42px 0px 0px 42px;
+}
+
+.cursos{
+    margin-left: 4%;
+}
