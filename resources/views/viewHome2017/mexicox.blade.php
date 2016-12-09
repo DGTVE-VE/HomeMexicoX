@@ -15,20 +15,12 @@ MéxicoX
         <div class="col-md-6 imgCurso">
             <img class="foto pull-left" src="http://placehold.it/150x150">
         </div>
-        <div class="col-md-6">
-            <div class="caption tituloCurso text-uppercase">Educación Intercultural</div>
-            <div class="caption fechaCurso">Empieza 13 enero 2016</div>
+        <div class="col-md-6"><br>
+            <div class="caption tituloCurso text-uppercase">Educación Intercultural</div><br>
+            <div class="caption fechaCurso">Empieza 13 enero 2016</div><br>
             <div class=""><i class="fa fa-chevron-circle-right btnCurso"></i></div>
         </div>
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-3 cuadro">
-        <img class="foto" src="http://placehold.it/150x150">
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-3 cuadro">
-        <img class="foto" src="http://placehold.it/150x150">
-    </div>
+    </div>   
 </div>
 @endsection
 @section('pieMexicoX')

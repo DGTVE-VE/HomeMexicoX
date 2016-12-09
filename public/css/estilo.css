@@ -84,8 +84,15 @@ code {
 }
 
 .btnCurso{
-    color: white;
+    color: #81F781;
     font-size: 20px;
+}
+.tituloCurso{
+    font-size: 15px;
+    color: white;
+}
+.fechaCurso{
+    color: #D8CEF6;
 }
 .foto{    
     border-radius: 42px 0px 0px 42px;
