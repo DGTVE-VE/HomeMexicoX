@@ -40,4 +40,3 @@ MéxicoX
 @section('pieMexicoX')
 @include('viewHome2017.pieMexicoX')
 @endsection
-
