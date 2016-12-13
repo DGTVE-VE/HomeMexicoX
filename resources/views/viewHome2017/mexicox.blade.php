@@ -11,31 +11,45 @@ MéxicoX
     <div class="col-md-2">
         <h3>Cursos</h3>
     </div>
-    <div class="col-md-2">
-        <h3>Recientes</h3>
+    <div class="col-md-6">
+        <h3 id="clasificacion">Recientes</h3>
     </div>
 </div>
-<div class="col-md-12">
-    {{--*/ $i=1; /*--}}
-    @foreach($recientes as $cursoReciente)
-        <div class="col-md-4">
-            <div class="col-md-11 col-md-offset-1 cuadro">
-                <div class="col-md-4 imgCurso">
-                    <img class="foto pull-left img-responsive" src="{{$cursoReciente->thumbnail}}" style="width:200px; height:150px;">
-                </div>
-                <div class="col-md-8">
-                    <div class="caption tituloCurso text-uppercase">{{$cursoReciente->course_name}}</div>
-                    <div class="caption fechaCurso">Empieza {{$cursoReciente->inicio}}</div>
-                    <div class=""><br><i class="fa fa-chevron-circle-right btnCurso"></i></div>
-                </div>
-            </div>
-        </div>
-        @if($i%3==0)
-            <div class="col-md-12" style="padding:10px;"></div>
-        @endif
-        {{--*/ $i++; /*--}}
-    @endforeach
-</div>
+<div id="contenedorCursos" class="col-md-12"> </div>
+<script>
+    $.ajax({
+        method: "POST",
+        url: "{{url('Home2017/filtroCursos/0')}}",
+        data: {
+            _token: "{{csrf_token()}}"
+        },
+        error: function (ts) {
+            console.log(ts.responseText);
+        }
+    })
+    .done(function (msg) {
+        $("#contenedorCursos").append(msg)
+    });
+    $(document).on('click', 'a.ligaCategoria', function () {
+        var $element = $(this);
+        $.ajax({
+            method: "POST",
+            url: "{{url('Home2017/filtroCursos')}}" + "/" + $element.attr('value'),
+            data: {
+                _token: "{{csrf_token()}}"
+            },
+            error: function (ts) {
+                console.log(ts.responseText);
+            }
+        })
+        .done(function (msg) {
+            $("#clasificacion").empty();
+            $("#clasificacion").append($element.html());
+            $("#contenedorCursos").empty();
+            $("#contenedorCursos").append(msg);
+        });
+    });
+</script>
 @endsection
 @section('pieMexicoX')
 @include('viewHome2017.pieMexicoX')
