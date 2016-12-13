@@ -18,8 +18,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                    {{--*/ $cont = 1; /*--}}
                         @foreach($categorias as $categoria)
-                            <li><a href="#">{{$categoria->categoria}}</a></li>
+                            <li><a class="ligaCategoria" value="{{$cont}}">{{$categoria->categoria}}</a></li>
+                            {{--*/ $cont++; /*--}}
                         @endforeach
                     </ul>
                 </li>

@@ -18,6 +18,7 @@ Route::get ('/','Controller@index');
 Route::get('MexicoX','MexicoxController@mexicox');
 
 Route::get('Home2017','MexicoxController@Home2017');
+Route::post('Home2017/filtroCursos/{categoria}','MexicoxController@filtroCursos');
 
 Route::auth();
 
