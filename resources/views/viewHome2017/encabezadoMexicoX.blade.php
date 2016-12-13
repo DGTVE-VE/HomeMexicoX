@@ -18,9 +18,9 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">_</a></li>
-                        <li><a href="#">_</a></li>
-                        <li><a href="#">_</a></li>                
+                        @foreach($categorias as $categoria)
+                            <li><a href="#">{{$categoria->categoria}}</a></li>
+                        @endforeach
                     </ul>
                 </li>
                 <div class="col-sm-4 col-md-4">
