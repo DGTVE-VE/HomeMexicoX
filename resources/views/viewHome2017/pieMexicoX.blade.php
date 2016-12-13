@@ -24,7 +24,7 @@
     </div>
     <div class="col-md-1">
         <a href="http://mexicox.gob.mx/">
-            <img src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag.png" alt="MéxicoX" width="100">
+            <img src="img/mexicox.png" alt="MéxicoX" width="100">
         </a>
     </div>
     <div class="col-md-6"></div>
