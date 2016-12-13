@@ -40,9 +40,14 @@ class MexicoxController extends Controller
                                     and  b.id_categoria = c.id
                                     and a.course_id is not null 
                                     and trim(a.course_id)!='' and a.activo=1 order by inicio desc");
-                                    
+       $cursosRecientes = DB::select("select  c.categoria,a.course_name,a.course_id, a.inicio, a.fin,a.inicio_inscripcion,a.fin_inscripcion,a.descripcion,a.thumbnail,a.institucion
+                                    from course_name a, curso_categoria b, categorias c
+                                    where a.id = b.id_curso 
+                                    and  b.id_categoria = c.id
+                                    and a.course_id is not null 
+                                    and trim(a.course_id)!='' and a.activo=1 order by inicio desc limit 9");
         $categorias = DB::select("select id, categoria from categorias order by categoria");
-        return view('viewHome2017/mexicox')->with('cursos',$cursosTodos)->with('clasifica',$clasifica)->with('categorias',$categorias);
+        return view('viewHome2017/mexicox')->with('cursos',$cursosTodos)->with('clasifica',$clasifica)->with('categorias',$categorias)->with('recientes',$cursosRecientes);
    }
    
    
