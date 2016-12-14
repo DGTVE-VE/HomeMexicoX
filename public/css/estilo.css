@@ -73,6 +73,11 @@ code {
     padding-left: 0 !important;
     background: #34294f;
 }
+.cuadro:hover{
+  -webkit-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
+-moz-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
+box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
+}
 .imgCurso{
     padding-left: 0 !important;
 }
