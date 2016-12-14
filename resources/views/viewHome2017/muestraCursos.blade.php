@@ -17,3 +17,9 @@
         @endif
         {{--*/ $i++; /*--}}
     @endforeach
+    @if($i==1)
+        <div class="col-md-10 col-md-offset-2"><h3>Por el momento no hay cursos activos para esta clasificación </h3></div>
+    @endif
+    @if(($i-1)%3!=0 || $i==1)
+        <div class="col-md-12" style="padding:10px;"></div>
+    @endif
