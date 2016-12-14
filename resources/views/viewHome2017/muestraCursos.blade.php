@@ -8,7 +8,7 @@
                 <div class="col-md-8">
                     <div class="caption tituloCurso text-uppercase">{{$curso->course_name}}</div>
                     <div class="caption fechaCurso">Empieza {{$curso->inicio}}</div>
-                    <div class=""><br><i class="fa fa-chevron-circle-right btnCurso"></i></div>
+                    <div style="position:relative; margin-top:15px;"><i class="glyphicon glyphicon-asterisk asteriskBco"></i><a href="#"><i class="fa fa-chevron-circle-right btnCurso"></i></a></div>
                 </div>
             </div>
         </div>

@@ -85,6 +85,8 @@ code {
 .btnCurso{
     color: #4fb96e;
     font-size: 20px;
+    z-index:3;
+    position:absolute;
 }
 .tituloCurso{
     font-size: 15px;
@@ -101,4 +103,11 @@ code {
 
 .cursos{
     margin-left: 4%;
+}
+.asteriskBco{
+    font-size: 19px;
+    color:white !important;
+    left:-1px;
+    z-index:2;
+    position:absolute;
 }
