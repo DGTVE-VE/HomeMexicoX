@@ -22,6 +22,7 @@ and open the template in the editor.
         <script src="{{ asset('js/efectos.js') }}"></script>
         <!--Fuentes-->
         <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
         <!--favicon-->
         <link rel="shortcut icon" href="{{ asset('mexicox.ico') }}" >
         <!--Css extra-->

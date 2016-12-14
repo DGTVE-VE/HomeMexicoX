@@ -17,7 +17,7 @@ html {
 body {
     /* Margin bottom by footer height */
     /*margin-bottom: 60px;*/
-    
+    font-family: 'Ubuntu', sans-serif;
 }
 
 /* Custom page CSS
@@ -57,7 +57,7 @@ code {
 
 
 .morado{
-    background: #503e64;
+    background: #34294f;
 }
 .txtMenu{
     color:white !important;
@@ -71,7 +71,7 @@ code {
     -webkit-border-radius: 44px 42px 42px 42px;
     border: 1px solid #000000;
     padding-left: 0 !important;
-    background: #503e64;
+    background: #34294f;
 }
 .imgCurso{
     padding-left: 0 !important;

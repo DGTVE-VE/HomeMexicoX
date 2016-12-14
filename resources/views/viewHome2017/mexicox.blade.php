@@ -8,10 +8,13 @@ MéxicoX
 @section('cuerpoMexicoX')
 @include('viewHome2017.banner')
 <div class="navbar navbar-header barraGuia col-md-12">
-    <div class="col-md-2">
-        <h3>Cursos</h3>
+    <div class="col-lg-1 col-md-2">
+        <h3>CURSOS</h3>
     </div>
-    <div class="col-md-6">
+    <div class="col-lg-1 col-md-1">
+        <img class="img-responsive" src="img/lineaVertical.png" style="height: 45px; width: 45px; margin: auto; margin-top:5px;"/>
+    </div>
+    <div class="col-lg-5 col-md-6">
         <h3 id="clasificacion">Recientes</h3>
     </div>
 </div>
