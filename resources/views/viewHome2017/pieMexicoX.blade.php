@@ -1,5 +1,4 @@
-<footer class="footer">
-    <ul class="nav navbar-nav navbar-left col-md-12">
+    <ul class="nav navbar-nav navbar-left col-md-12" style="border-top: solid 2px black;">
         <li>
             <a href="http://mx.televisioneducativa.gob.mx/contact" style="color: black;"><strong>Contacto</strong></a>
         </li>
@@ -45,4 +44,3 @@
         <a href="http://mx.televisioneducativa.gob.mx/honor" style="color: red; font-size: 10px;" aria-expanded="false">Código de Honor</a>
 
     </div>
-</footer>

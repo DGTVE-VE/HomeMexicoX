@@ -9,10 +9,10 @@
       <img src="{{'img/banner_mexicox.png'}}" alt="First slide">
     </div>
     <div class="item">
-      <img src="{{'img/banner_mexicox.png'}}" alt="First slide">
+      <img src="{{'img/banner_mexicox.png'}}" alt="Second slide">
     </div>
     <div class="item">
-      <img src="{{'img/banner_mexicox.png'}}" alt="First slide">
+      <img src="{{'img/banner_mexicox.png'}}" alt="Third slide">
     </div>
   </div>
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -25,7 +25,7 @@
   </a>
 </div>
 <script>
-    /*$('.carousel').carousel({
-  interval: 2000
-})*/
+    $('.carousel').carousel({
+        interval: 2000
+    })
 </script>
