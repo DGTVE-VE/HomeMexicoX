@@ -74,16 +74,16 @@ code {
     background: #34294f;
 }
 .cuadro:hover{
-  -webkit-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
--moz-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
+    -webkit-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
+    -moz-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
+    box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
 }
 .imgCurso{
     padding-left: 0 !important;
 }
 
 .btnCurso{
-    color: #81F781;
+    color: #4fb96e;
     font-size: 20px;
 }
 .tituloCurso{
@@ -91,7 +91,7 @@ box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
     color: white;
 }
 .fechaCurso{
-    color: #D8CEF6;
+    color: #a482f6;
 }
 .foto{    
     border-radius: 42px 0px 0px 42px;
