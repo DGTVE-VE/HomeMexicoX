@@ -19,15 +19,6 @@ body {
     /*margin-bottom: 60px;*/
     
 }
-.footer {
-    position: absolute;
-    border-top: 2px solid black;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 60px;  
-}
-
 
 /* Custom page CSS
 -------------------------------------------------- */
@@ -68,6 +59,9 @@ code {
 .morado{
     background: #503e64;
 }
+.txtMenu{
+    color:white !important;
+}
 .barraGuia{
     border-bottom: 2px solid black;
 }
@@ -103,5 +97,3 @@ code {
 .cursos{
     margin-left: 4%;
 }
-
-
