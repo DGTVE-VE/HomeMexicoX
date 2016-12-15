@@ -54,10 +54,24 @@ class MexicoxController extends Controller
                                     and trim(a.course_id)!='' and a.activo=1 order by inicio desc limit 9");
        }
        else{
-           $cursosRecientes = DB::select("SELECT * FROM bitnami_edx.course_name a inner join bitnami_edx.curso_categoria b
+            $cursosRecientes = DB::select("SELECT * FROM bitnami_edx.course_name a inner join bitnami_edx.curso_categoria b
                 on a.id = b.id_curso where b.id_categoria = ".$categoria."
                 and a.course_id is not null and trim(a.course_id)!='' and a.activo=1 order by inicio desc;");
        }
        return view('viewHome2017/muestraCursos')->with('cursosFiltrados',$cursosRecientes);
+   }
+   
+   public Function obtenerInstituciones($categoria){
+        if($categoria=='0'){
+            $instituciones = DB::select("select a.institucion from course_name a, curso_categoria b, categorias c
+                                    where a.id = b.id_curso and  b.id_categoria = c.id and a.course_id is not null 
+                                    and trim(a.course_id)!='' and a.activo=1 order by inicio desc limit 9");
+        }
+        else{
+            $instituciones = DB::select("SELECT a.institucion FROM bitnami_edx.course_name a inner join bitnami_edx.curso_categoria b
+                on a.id = b.id_curso where b.id_categoria = ".$categoria."
+                and a.course_id is not null and trim(a.course_id)!='' and a.activo=1 group by institucion order by inicio desc");
+        }
+        return view('viewHome2017/muestraInstituciones')->with('instituciones',$instituciones);
    }
 }
