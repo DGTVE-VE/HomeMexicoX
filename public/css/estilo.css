@@ -61,6 +61,26 @@ code {
 }
 .txtMenu{
     color:white !important;
+    position: relative;
+}
+.txtMenu:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    animation: width 0.5s;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.txtMenu:hover:before{
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 .barraGuia{
     border-bottom: 2px solid black;
@@ -110,4 +130,8 @@ code {
     left:-1px;
     z-index:2;
     position:absolute;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #34294f !important;
+    border-bottom-color: white;
 }

@@ -11,7 +11,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse pull-right">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="http://mx.televisioneducativa.gob.mx/register?next=%2Fdashboard">registrarse</a></li>
+                <li><a href="http://mx.televisioneducativa.gob.mx/register?next=%2Fdashboard" class="txtMenu">Registrarse</a></li>
                 <li><a href="http://mx.televisioneducativa.gob.mx/login" class="txtMenu">Iniciar Sesión</a></li>
                 <li><a href="#" class="txtMenu">FAQs</a></li>
                 <li><a href="#" class="txtMenu">Nosotros</a></li>
