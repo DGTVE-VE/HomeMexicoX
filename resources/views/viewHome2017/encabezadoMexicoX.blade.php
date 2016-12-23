@@ -1,6 +1,5 @@
 <style>
-    .barra{background: white; height: 8%;}
-    .logo{margin-left: 45px;  padding:0 0 0 0;}
+    .barra{background: white; }   
     .btnmorado{
         font-weight: bold;
         border-radius: 108px 108px 108px 108px;
@@ -41,7 +40,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand logo" href="http://mexicox.gob.mx/"><img class="imglogo" src="img/logo.png"></a>
+        <a href="http://mexicox.gob.mx/"><img class="img-responsive" src="img/logo.png"></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse pull-right">
         <ul class="nav navbar-nav">
@@ -59,9 +58,10 @@
 
             <li><input type="button" class="btnverde" value="Iniciar Sesión" onclick="window.location.href = 'http://mx.televisioneducativa.gob.mx/login'"></li>            
             <li class="buscar">
-                <form class="navbar-form" role="search">
+                <form class="navbar-form" role="search" method="post" action="{{url('Home2017/buscaCurso')}}">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Buscar" name="q">
+                        <input type="text" class="form-control" placeholder="Busqueda por curso" name="termino">
+                         {{ csrf_field() }}
                         <div class="input-group-btn">
                             <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                         </div>

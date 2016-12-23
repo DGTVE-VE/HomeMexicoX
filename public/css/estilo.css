@@ -27,13 +27,15 @@ body {
     -webkit-border-radius: 44px 42px 42px 42px;
     border: 1px solid #000000;
     padding-left: 0 !important;
-    background: #34294f;
+    background: #34294f; height: 150px !important;
+
 }
 .cuadro:hover{
     border: 0 !important;
     -webkit-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
     -moz-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
     box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
+
 }
 .imgCurso{
     border: 0 !important;
@@ -84,39 +86,43 @@ body {
 }  
 
 #badge-ribbon {
- position: relative;
- background: red;
- height: 100px;
- width: 100px;
- -moz-border-radius:    50px;
- -webkit-border-radius: 50px;
- border-radius:         50px;
+    position: relative;
+    background: red;
+    height: 100px;
+    width: 100px;
+    -moz-border-radius:    50px;
+    -webkit-border-radius: 50px;
+    border-radius:         50px;
 }
 
 #badge-ribbon:before,
 #badge-ribbon:after {
-  content: '';
-  position: absolute;
-  border-bottom: 70px solid red;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  top: 70px;
-  left: -10px;
-  -webkit-transform: rotate(-140deg);
-  -moz-transform:    rotate(-140deg);
-  -ms-transform:     rotate(-140deg);
-  -o-transform:      rotate(-140deg);
+    content: '';
+    position: absolute;
+    border-bottom: 70px solid red;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    top: 70px;
+    left: -10px;
+    -webkit-transform: rotate(-140deg);
+    -moz-transform:    rotate(-140deg);
+    -ms-transform:     rotate(-140deg);
+    -o-transform:      rotate(-140deg);
 }
 
 #badge-ribbon:after {
-  left: auto;
-  right: -10px;
-  -webkit-transform: rotate(140deg);
-  -moz-transform:    rotate(140deg);
-  -ms-transform:     rotate(140deg);
-  -o-transform:      rotate(140deg);
+    left: auto;
+    right: -10px;
+    -webkit-transform: rotate(140deg);
+    -moz-transform:    rotate(140deg);
+    -ms-transform:     rotate(140deg);
+    -o-transform:      rotate(140deg);
 }
-
+.lineaCursos{
+    margin-top: 10%; 
+    border-right: 2px solid black !important; 
+    height: 25px;
+}
 /*#contenedorCursos{margin-bottom: 2%;}*/
 @media (max-width: 320px) { 
     .tituloCurso{
@@ -129,24 +135,25 @@ body {
 }
 @media (min-width: 425px) { 
     .tituloCurso{
-        font-size: 7px;
+        font-size: 10px;
         color: white !important;
     }
     .fechaCurso{
-        font-size: 7px;
+        font-size: 10px;
     }
 }
 
 @media (min-width: 768px) { 
     .tituloCurso{
-        font-size: 7px;
+        font-size: 11px;
         color: white;
     }
     .fechaCurso{
-        font-size: 7px;
-    } 
-    .logo{margin-left: 0px !important; width: 80% !important; padding:0 0 0 0;}
-
+        font-size: 10px;
+    }     
+    .lineaCursos{
+        margin-left: -30%;
+    }
 }
 
 @media (min-width: 1024px) { 
@@ -157,62 +164,76 @@ body {
     .fechaCurso{
         font-size: 8px;
     }
-    
+    .lineaCursos{
+        margin-left: -5%;    
+    }
+
 }
 
 @media (min-width: 1200px) { 
     .tituloCurso{
-        font-size: 15px;
+        font-size: 13px;
         color: white;
     }
     .fechaCurso{
-        font-size: 15px;
+        font-size: 13px;
     }
-    
+    .lineaCursos{
+        margin-left: 8%;
+    }
+
 }
 
+@media (min-width: 1440px) { 
+    .lineaCursos{margin-right: -25%;}
+}
+@media (min-width: 2560px) { 
+    .lineaCursos{margin-right: 5%;}
+}
 /*Pleca de cuadro de curso (status)*/
 .ribbon {
-  position: absolute;
-  right: -5px; top: -5px;
-  z-index: 1;
-  overflow: hidden;
-  width: 75px; height: 75px;
-  text-align: right;
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
 }
 .ribbon span {
-  font-size: 10px;
-  font-weight: bold;
-  color: #FFF;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 20px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  width: 100px;
-  display: block;
-  background: #79A70A;
-  background: linear-gradient(#34294F 0%, #A482F6 100%);
-  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 19px; right: -21px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#34294F 0%, #A482F6 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
 }
 .ribbon span::before {
-  content: "";
-  position: absolute; left: 0px; top: 100%;
-  z-index: -1;
-  border-left: 3px solid #A482F6;
-  border-right: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid #A482F6;
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid #A482F6;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #A482F6;
 }
 .ribbon span::after {
-  content: "";
-  position: absolute; right: 0px; top: 100%;
-  z-index: -1;
-  border-left: 3px solid transparent;
-  border-right: 3px solid #A482F6;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid #A482F6;
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #A482F6;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #A482F6;
 }
 /*FIn Pleca de cuadro de curso (status)*/
+
+

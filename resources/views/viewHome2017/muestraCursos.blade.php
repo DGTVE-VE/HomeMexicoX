@@ -6,9 +6,9 @@
         <div class="col-md-6 col-sm-6 col-lg-5 col-xs-6 imgCurso">
             <img class="foto pull-left img-responsive" src="{{$curso->thumbnail}}">
         </div>
-        <div class="col-md-6 col-sm-6 col-lg-7 col-xs-6">
+        <div class="col-md-6 col-sm-6 col-lg-7 col-xs-6" style="padding-right: 12%;">
             <div class="caption tituloCurso text-uppercase"><br>{{$curso->course_name}}</div>
-            <div class="caption fechaCurso"> {{$curso->inicio}} | {{$curso->fin}}</div>
+            <div class="caption fechaCurso"> {{ $curso->inicio }} | {{$curso->fin}}</div>
             <!--<div style="position:relative; margin-top:15px;"><i class="glyphicon glyphicon-asterisk asteriskBco"></i><a href="#"><i class="fa fa-chevron-circle-right btnCurso"></i></a></div>-->
             <a><div class="btnCurso"><i class="fa fa-chevron-right btnFlecha" aria-hidden="true"></i></span></div></a>            
         </div>
