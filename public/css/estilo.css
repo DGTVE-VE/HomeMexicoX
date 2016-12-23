@@ -8,84 +8,20 @@ and open the template in the editor.
     Author     : SMARTINEZ
 */
 
-/* Sticky footer styles
--------------------------------------------------- */
 html {
     position: relative;
     min-height: 100%;
 }
 body {
-    /* Margin bottom by footer height */
-    /*margin-bottom: 60px;*/
     font-family: 'Ubuntu', sans-serif;
 }
 
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container {
-    padding: 60px 15px 0;
-}
-.container .text-muted {
-    margin: 20px 0;
-}
-
-.footer > .container {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-code {
-    font-size: 80%;
-}
-
-
-/*!
- * IE10 viewport hack for Surface/desktop Windows 8 bug
- * Copyright 2014-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
-/*
- * See the Getting Started docs for more information:
- * http://getbootstrap.com/getting-started/#support-ie10-width
- */
-@-ms-viewport     { width: device-width; }
-@-o-viewport      { width: device-width; }
-@viewport         { width: device-width; }
-
-
-.morado{
-    background: #34294f;
-}
-.txtMenu{
-    color:white !important;
-    position: relative;
-}
-.txtMenu:before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    animation: width 0.5s;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-}
-.txtMenu:hover:before{
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
 .barraGuia{
     border-bottom: 2px solid black;
 }
 .cuadro{
+    position: relative;    
+    border: 0 !important;
     border-radius: 44px 42px 42px 42px;
     -moz-border-radius: 44px 42px 42px 42px;
     -webkit-border-radius: 44px 42px 42px 42px;
@@ -94,44 +30,189 @@ code {
     background: #34294f;
 }
 .cuadro:hover{
+    border: 0 !important;
     -webkit-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
     -moz-box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
     box-shadow: 6px 6px 10px 2px rgba(91,72,138,1);
 }
 .imgCurso{
+    border: 0 !important;
     padding-left: 0 !important;
+    overflow:hidden;
+}
+.foto{ 
+    height: 150px !important;
+    border: 0 !important;
+    border-radius: 42px 35px 35px 42px;
+    -moz-border-radius: 42px 35px 35px 42px;
+    -webkit-border-radius: 42px 35px 35px 42px;
 }
 
-.btnCurso{
-    color: #4fb96e;
-    font-size: 20px;
-    z-index:3;
-    position:absolute;
-}
-.tituloCurso{
-    font-size: 15px;
-    color: white;
-}
+
 .fechaCurso{
     color: #a482f6;
 }
-.foto{    
-    border-radius: 42px 0px 0px 42px;
-    -moz-border-radius: 42px 0px 0px 42px;
-    -webkit-border-radius: 42px 0px 0px 42px;
+
+/*.btnCurso{
+    width: 25px;
+    height: 25px;
+    border-radius: 100px 100px 100px 100px;
+    -moz-border-radius: 100px 100px 100px 100px;
+    -webkit-border-radius: 100px 100px 100px 100px;
+    background-color: #4fb96f;
+}*/
+
+.btnFlecha{
+    padding-top: 15% !important;
+    padding-left: 25%!important;
+    color: white;
+    font-size: 10px;
+
+}
+.cursos{
+    margin-left: 14%;
 }
 
-.cursos{
-    margin-left: 4%;
-}
-.asteriskBco{
-    font-size: 19px;
-    color:white !important;
-    left:-1px;
-    z-index:2;
-    position:absolute;
-}
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
     background-color: #34294f !important;
     border-bottom-color: white;
 }
+
+.barra{
+    background: white;
+    padding: 0 !important;
+}  
+
+#badge-ribbon {
+ position: relative;
+ background: red;
+ height: 100px;
+ width: 100px;
+ -moz-border-radius:    50px;
+ -webkit-border-radius: 50px;
+ border-radius:         50px;
+}
+
+#badge-ribbon:before,
+#badge-ribbon:after {
+  content: '';
+  position: absolute;
+  border-bottom: 70px solid red;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  top: 70px;
+  left: -10px;
+  -webkit-transform: rotate(-140deg);
+  -moz-transform:    rotate(-140deg);
+  -ms-transform:     rotate(-140deg);
+  -o-transform:      rotate(-140deg);
+}
+
+#badge-ribbon:after {
+  left: auto;
+  right: -10px;
+  -webkit-transform: rotate(140deg);
+  -moz-transform:    rotate(140deg);
+  -ms-transform:     rotate(140deg);
+  -o-transform:      rotate(140deg);
+}
+
+/*#contenedorCursos{margin-bottom: 2%;}*/
+@media (max-width: 320px) { 
+    .tituloCurso{
+        font-size: 8px;
+        color: white !important;
+    }
+    .fechaCurso{
+        font-size: 6px;
+    }    
+}
+@media (min-width: 425px) { 
+    .tituloCurso{
+        font-size: 7px;
+        color: white !important;
+    }
+    .fechaCurso{
+        font-size: 7px;
+    }
+}
+
+@media (min-width: 768px) { 
+    .tituloCurso{
+        font-size: 7px;
+        color: white;
+    }
+    .fechaCurso{
+        font-size: 7px;
+    } 
+    .logo{margin-left: 0px !important; width: 80% !important; padding:0 0 0 0;}
+
+}
+
+@media (min-width: 1024px) { 
+    .tituloCurso{
+        font-size: 8px;
+        color: white;
+    }
+    .fechaCurso{
+        font-size: 8px;
+    }
+    
+}
+
+@media (min-width: 1200px) { 
+    .tituloCurso{
+        font-size: 15px;
+        color: white;
+    }
+    .fechaCurso{
+        font-size: 15px;
+    }
+    
+}
+
+/*Pleca de cuadro de curso (status)*/
+.ribbon {
+  position: absolute;
+  right: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#34294F 0%, #A482F6 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; right: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #A482F6;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #A482F6;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #A482F6;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #A482F6;
+}
+/*FIn Pleca de cuadro de curso (status)*/
