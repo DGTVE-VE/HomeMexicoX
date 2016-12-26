@@ -8,15 +8,15 @@ MéxicoX
 @section('cuerpoMexicoX')
 @include('viewHome2017.banner')
 <div class="navbar navbar-header barraGuia col-md-12 col-lg-12 col-xs-12 col-sm-12">
-    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-4" >
         <h3 class="lineaCursos">CURSOS</h3>
     </div>      
-    <div class="col-lg-10 col-md-9 col-sm-7 col-xs-12 pull-left">
+    <div class="col-lg-9 col-md-8 col-sm-6 col-xs-4 pull-left">
         <h3  id="clasificacion" class="pull-left" style="margin-top: 0.8%;">Recientes</h3>
     </div>
-    <div class="col-lg-1 col-md-1  col-sm-2 col-xs-12" id="selectInstitucion" style="padding-top:15px;"></div>
+    <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4" id="selectInstitucion" style="padding-top:15px;"></div>
 </div>
-<div id="contenedorCursos" class="col-md-12"> </div>
+<div id="contenedorCursos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 <script>
     $.ajax({
         method: "POST",
