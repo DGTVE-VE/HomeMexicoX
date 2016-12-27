@@ -28,9 +28,9 @@ MéxicoX
             console.log(ts.responseText);
         }
     })
-            .done(function (msg) {
-                $("#contenedorCursos").append(msg)
-            });
+    .done(function (msg) {
+        $("#contenedorCursos").append(msg)
+    });
     $.ajax({
         method: "POST",
         url: "{{url('Home2017/obtieneInstituciones/0')}}",
@@ -41,10 +41,10 @@ MéxicoX
             console.log(ts.responseText);
         }
     })
-            .done(function (msg) {
-                $("#selectInstitucion").empty()
-                $("#selectInstitucion").append(msg)
-            });
+    .done(function (msg) {
+        $("#selectInstitucion").empty()
+        $("#selectInstitucion").append(msg)
+    });
     $(document).on('click', 'a.ligaCategoria', function () {
         var $element = $(this);
         $.ajax({
@@ -57,12 +57,12 @@ MéxicoX
                 console.log(ts.responseText);
             }
         })
-                .done(function (msg) {
-                    $("#clasificacion").empty();
-                    $("#clasificacion").append($element.html());
-                    $("#contenedorCursos").empty();
-                    $("#contenedorCursos").append(msg);
-                });
+        .done(function (msg) {
+            $("#clasificacion").empty();
+            $("#clasificacion").append($element.html());
+            $("#contenedorCursos").empty();
+            $("#contenedorCursos").append(msg);
+        });
         $.ajax({
             method: "POST",
             url: "{{url('Home2017/obtieneInstituciones')}}" + "/" + $element.attr('value'),
@@ -73,10 +73,10 @@ MéxicoX
                 console.log(ts.responseText);
             }
         })
-                .done(function (msg) {
-                    $("#selectInstitucion").empty()
-                    $("#selectInstitucion").append(msg)
-                });
+        .done(function (msg) {
+            $("#selectInstitucion").empty()
+            $("#selectInstitucion").append(msg)
+        });
     });
 </script>
 @endsection
