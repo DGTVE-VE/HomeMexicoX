@@ -43,7 +43,7 @@
 <div class="col-md-12">
     <br>
     <p class="text-muted col-md-12 col-sm-12" style="font-size: 10px;">© MéxicoX. Todos los derechos reservados, excepto cuando se indique. EdX, Open edX, y los logos de edX y Open edX son marcas registradas de edX Inc.</p>        
-    <a  class=" col-md-12 col-sm-6" href="http://mx.televisioneducativa.gob.mx/privacy" style="color: red; font-size: 10px;" aria-expanded="false">Política de privacidad</a> - 
-    <a class=" col-md-12 col-sm-6" href="http://mx.televisioneducativa.gob.mx/honor" style="color: red; font-size: 10px;" aria-expanded="false">Código de Honor</a>
+	<a href="http://mx.televisioneducativa.gob.mx/privacy" style="color: red; font-size: 10px;" aria-expanded="false">Política de privacidad </a> <span style="padding-right:10px; padding-left:10px;"> - </span>
+    <a href="http://mx.televisioneducativa.gob.mx/honor" style="color: red; font-size: 10px;" aria-expanded="false">Código de Honor</a>
 
 </div>
