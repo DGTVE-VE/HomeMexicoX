@@ -11,7 +11,18 @@
                 <div class="caption fechaCurso"> {{ $curso->inicio }} | {{$curso->fin}}</div>
                 <div class="btnCurso"><a href="http://www.mexicox.gob.mx/courses/{{$curso->course_id}}/about"><i class="fa fa-chevron-right btnFlecha" aria-hidden="true"></i></a></div>
             </div>
-            <div class="ribbon"><span>Reciente</span></div>
+			{{--*/ $fechaHoy = date_create('2016-08-05'); /*--}}
+			@if($fechaHoy < date_create($curso->inicio_inscripcion))
+				<div class="ribbon"><span>Reciente</span></div>
+			@elseif($fechaHoy >= date_create($curso->inicio_inscripcion) && $fechaHoy <= date_create($curso->fin_inscripcion))
+				<div class="ribbon"><span>Inscripciones</span></div>
+			@elseif($fechaHoy >= date_create($curso->fin_inscripcion) && $fechaHoy <= date_create($curso->inicio))
+				<div class="ribbon"><span style="background: linear-gradient(#79A70A 100%, #A482F6 0%) !important;">Por Iniciar</span></div>
+			@elseif($fechaHoy >= date_create($curso->inicio) && $fechaHoy <= date_create($curso->fin))
+				<div class="ribbon"><span style="background: linear-gradient(green 100%, #A482F6 0%) !important;">En curso</span></div>
+			@elseif($fechaHoy > date_create($curso->fin))
+				<div class="ribbon"><span style="background: linear-gradient(rgba(0, 0, 0, 1) 100%, #A482F6 0%) !important;">Finalizado</span></div>
+			@endif
         </div>
     </div>
     @if($i%3==0)
