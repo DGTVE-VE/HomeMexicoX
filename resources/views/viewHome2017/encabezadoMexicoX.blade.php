@@ -31,6 +31,9 @@
     .navbar-default .navbar-nav > .open > a:hover {
         background: white !important;
     }
+	.logoPrincipal{
+		margin-left:10px;
+	}
 </style>
 <nav class="navbar navbar-default navbar-fixed-top barra">
     <div class="navbar-header">
@@ -40,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="http://mexicox.gob.mx/"><img class="img-responsive" src="img/logo.png"></a>
+        <a href="http://mexicox.gob.mx/"><img class="img-responsive logoPrincipal" src="img/logo.png"></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse pull-right">
         <ul class="nav navbar-nav">

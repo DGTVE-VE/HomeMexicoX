@@ -1,8 +1,13 @@
 {{--*/ $i=1; /*--}}
+<style>
+	.redondeaDiv{
+		border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px;
+	}
+</style>
 <link rel="stylesheet" href="{{asset('css/muestraInstituciones.css')}}"/>
 <div class="dropdown">
-    <button id="myBtn" class="dropbtn">Institución</button>
-    <div id="myDropdown" class="dropdown-content">
+    <button id="myBtn" class="dropbtn redondeaDiv">Institución</button>
+    <div id="myDropdown" class="dropdown-content redondeaDiv">
         @foreach($instituciones as $institucion)    
             <a href="#" onclick="ocultaLista('{{$institucion->institucion}}')">{{$institucion->institucion}}</a>
         @endforeach
