@@ -94,12 +94,12 @@ class MexicoxController extends Controller {
     public function buscar() {
         $termino = filter_input(INPUT_POST, 'termino');
                    
-        $cursos = Course_name::whereRaw("match(course_name,descripcion)"
+        $cursosRecientes = Course_name::whereRaw("match(course_name,descripcion)"
                 . "against('$termino') "
                 . "and course_id is not null and trim(course_id)!=''")->get();
         
-        dd( $cursos);
-         
+        //dd( $cursos);
+		return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
     }
 
 }

@@ -61,16 +61,41 @@
 
             <li><input type="button" class="btnverde" value="Iniciar Sesión" onclick="window.location.href = 'http://mx.televisioneducativa.gob.mx/login'"></li>            
             <li class="buscar">
-                <form class="navbar-form" role="search" method="post" action="{{url('Home2017/buscaCurso')}}">
+                <div class="navbar-form">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Busqueda por curso" name="termino">
+                        <input type="text" class="form-control" placeholder="Busqueda por curso" id="termino">
                          {{ csrf_field() }}
                         <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            <button class="btn btn-default" onclick="busquedaCurso()"><i class="glyphicon glyphicon-search"></i></button>
                         </div>
                     </div>
-                </form>
+                </div>
             </li>            
         </ul>
     </div><!--/.nav-collapse -->
 </nav>
+<script>
+	$('#termino').keypress(function(e) {
+		if(e.which == 13) {
+			busquedaCurso();
+		}
+	});
+	function busquedaCurso(){
+		variable = $('#termino').val();
+		$.ajax({
+			method: "POST",
+			url: "{{url('Home2017/buscaCurso')}}",
+			data: {
+				termino: variable,
+				_token: "{{csrf_token()}}"
+			},
+			error: function (ts) {
+				console.log(ts.responseText);
+			}
+		})
+		.done(function (msg) {
+			$("#contenedorCursos").empty(msg);
+			$("#contenedorCursos").append(msg);
+		});
+	}
+</script>
