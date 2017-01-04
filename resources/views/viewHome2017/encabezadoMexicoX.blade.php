@@ -96,6 +96,8 @@
 		.done(function (msg) {
 			$("#contenedorCursos").empty(msg);
 			$("#contenedorCursos").append(msg);
+			$("#clasificacion").empty();
+			$("#clasificacion").append('Resultado de la busqueda');
 		});
 	}
 </script>
