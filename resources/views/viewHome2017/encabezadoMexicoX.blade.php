@@ -98,6 +98,7 @@
 			$("#contenedorCursos").append(msg);
 			$("#clasificacion").empty();
 			$("#clasificacion").append('Resultado de la busqueda');
+			$("#selectInstitucion").empty();
 		});
 	}
 </script>

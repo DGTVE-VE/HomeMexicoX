@@ -42,8 +42,8 @@ MéxicoX
         }
     })
     .done(function (msg) {
-        $("#selectInstitucion").empty()
-        $("#selectInstitucion").append(msg)
+        $("#selectInstitucion").empty();
+        $("#selectInstitucion").append(msg);
     });
     $(document).on('click', 'a.ligaCategoria', function () {
         var $element = $(this);
@@ -74,8 +74,8 @@ MéxicoX
             }
         })
         .done(function (msg) {
-            $("#selectInstitucion").empty()
-            $("#selectInstitucion").append(msg)
+            $("#selectInstitucion").empty();
+            $("#selectInstitucion").append(msg);
         });
     });
 </script>
