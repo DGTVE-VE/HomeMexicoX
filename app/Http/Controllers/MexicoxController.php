@@ -54,7 +54,7 @@ class MexicoxController extends Controller {
                                     and a.course_id is not null 
                                     and trim(a.course_id)!='' and a.activo=1 order by inicio desc limit 9");
         } else {
-            $cursosRecientes = DB::select("SELECT * FROM bitnami_edx.course_name a inner join bitnami_edx.curso_categoria b
+            $cursosRecientes = DB::select("SELECT * FROM course_name a inner join curso_categoria b
                 on a.id = b.id_curso where b.id_categoria = " . $categoria . "
                 and a.course_id is not null and trim(a.course_id)!='' and a.activo=1 order by inicio desc;");
         }
@@ -71,7 +71,7 @@ class MexicoxController extends Controller {
             $condicionCat = "and b.id_categoria = " . $categoria;
         }
         $institucion = $_POST['imparte'];
-        $cursosRecientes = DB::select("SELECT * FROM bitnami_edx.course_name a inner join bitnami_edx.curso_categoria b
+        $cursosRecientes = DB::select("SELECT * FROM course_name a inner join curso_categoria b
             on a.id = b.id_curso where a.institucion = '" . $institucion . 
             "'" . $condicionCat . " and a.course_id is not null and trim(a.course_id)!='' and a.activo=1 order by inicio desc;");
         return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
@@ -84,7 +84,7 @@ class MexicoxController extends Controller {
                                     where a.id = b.id_curso and  b.id_categoria = c.id and a.course_id is not null 
                                     and trim(a.course_id)!='' and a.activo=1 order by inicio desc limit 9");
         } else {
-            $instituciones = DB::select("SELECT a.institucion FROM bitnami_edx.course_name a inner join bitnami_edx.curso_categoria b
+            $instituciones = DB::select("SELECT a.institucion FROM course_name a inner join curso_categoria b
                 on a.id = b.id_curso where b.id_categoria = " . $categoria . "
                 and a.course_id is not null and trim(a.course_id)!='' and a.activo=1 group by institucion order by inicio desc");
         }
