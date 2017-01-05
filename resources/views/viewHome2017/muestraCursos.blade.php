@@ -17,7 +17,7 @@
 			@elseif($fechaHoy >= date_create($curso->inicio_inscripcion) && $fechaHoy <= date_create($curso->fin_inscripcion))
 				<div class="ribbon"><span>Inscripciones</span></div>
 			@elseif($fechaHoy >= date_create($curso->fin_inscripcion) && $fechaHoy <= date_create($curso->inicio))
-				<div class="ribbon"><span style="background: linear-gradient(#bebe45 0%, #ebb943 100%) !important;">Por Iniciar</span></div>
+				<div class="ribbon"><span style="background: linear-gradient(#ebb943 0%, #D03B30 100%) !important;">Por Iniciar</span></div>
 			@elseif($fechaHoy >= date_create($curso->inicio) && $fechaHoy <= date_create($curso->fin))
 				<div class="ribbon"><span style="background: linear-gradient(#3bbf2a 0%, #5fbf3d 100%) !important;">En curso</span></div>
 			@elseif($fechaHoy > date_create($curso->fin))
