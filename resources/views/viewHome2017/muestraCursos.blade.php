@@ -11,7 +11,7 @@
                 <div class="caption fechaCurso"> {{ $curso->inicio }} | {{$curso->fin}}</div>
                 <div class="btnCurso"><a href="http://www.mexicox.gob.mx/courses/{{$curso->course_id}}/about"><i class="fa fa-chevron-right btnFlecha" aria-hidden="true"></i></a></div>
             </div>
-			{{--*/ $fechaHoy = date_create('2016-08-05'); /*--}}
+			{{--*/ $fechaHoy = date_create('now'); /*--}}
 			@if($fechaHoy < date_create($curso->inicio_inscripcion))
 				<div class="ribbon"><span>Reciente</span></div>
 			@elseif($fechaHoy >= date_create($curso->inicio_inscripcion) && $fechaHoy <= date_create($curso->fin_inscripcion))
