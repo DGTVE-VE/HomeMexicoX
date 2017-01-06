@@ -7,6 +7,8 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+use App\Model\Cursos_docentes;
+use App\Model\Course_name;
 use DB;
 
 
@@ -16,7 +18,9 @@ class Controller extends BaseController
     
     public function index() {
         
-        $cursosTodos = DB::select("select *from course_name where course_id is not null and trim(course_id)!='' and activo=1 order by inicio desc");
+        $cursosTodos = Cursos_docentes::whereHas('Course_name', function($query){
+			$query->where('activo', '=', 1);
+		})->get();
         
         return view('home',['cursos'=>$cursosTodos]);
     }

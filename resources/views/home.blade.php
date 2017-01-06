@@ -28,17 +28,17 @@
                 @if(!empty($cursos))
                 @foreach($cursos as $curso)
                 <div class="col-md-5 col-lg-3 col-ms-12 col-xs-12 padding-thumbnail" >
-                    <a style="text-decoration: none" href="http://mexicox.gob.mx/courses/{{ $curso->course_id }}/about">
+                    <a style="text-decoration: none" href="http://mexicox.gob.mx/courses/{{ $curso->course_name->course_id }}/about">
                         <div class="thumbnail thumbnail-size-large center-block border-thumbnail">
                             <div class="opacity">                                
-                                <img class="thumbnail-image-large img-tin"src="{{'http://mexicox.gob.mx/' . $curso->thumbnail }}" alt="...">
+                                <img class="thumbnail-image-large img-tin"src="{{'http://mexicox.gob.mx/' . $curso->course_name->thumbnail }}" alt="...">
                                 <div class="textover"><h2>Aprender más</h2></div>
                             </div>
                             <div class="caption">
-                                <div class="course-organization">{{ $curso->institucion }}</div>
-                                <div class="course-code">{{ $curso->course_id }}</div>
-                                <div class="course-title">{{ $curso->course_name }}</div>
-                                <div class="course-date">Empieza: {{ $curso->inicio }}</div>
+                                <div class="course-organization">{{ $curso->course_name->institucion }}</div>
+                                <div class="course-code">{{ $curso->course_name->course_id }}</div>
+                                <div class="course-title">{{ $curso->course_name->course_name }}</div>
+                                <div class="course-date">Empieza: {{ $curso->course_name->inicio }}</div>
                             </div>
                         </div>
                     </a>
