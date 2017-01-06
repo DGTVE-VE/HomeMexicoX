@@ -11,10 +11,10 @@ MéxicoX
     <div class="col-lg-1 col-md-2 col-sm-2 col-xs-4" >
         <h3 class="lineaCursos">CURSOS</h3>
     </div>      
-    <div class="col-lg-9 col-md-8 col-sm-6 col-xs-4 pull-left">
+    <div class="col-lg-8 col-md-7 col-sm-6 col-xs-4 pull-left">
         <h3  id="clasificacion" class="pull-left" style="margin-top: 0.8%;">Recientes</h3>
     </div>
-    <div class="col-lg-1 col-md-1 col-sm-2 col-xs-4" id="selectInstitucion" style="padding-top:5px; padding-bottom:5px;"></div>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4" id="selectInstitucion" style="padding-top:10px; padding-bottom:5px;"></div>
 </div>
 <div id="contenedorCursos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 <script>
