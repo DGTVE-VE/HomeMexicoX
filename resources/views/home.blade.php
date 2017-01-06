@@ -21,7 +21,7 @@
         </style>
     </head>
     <body style="padding: 0; margin: 0;">
-        <img id="the_pic" class="fit" src="{{asset('img/banner_formacion.jpg')}}" >    
+        <img id="the_pic" class="fit" src="{{asset('img/banner_formacion.jpg')}}" >
 
         <div class = "container-fluid padding-container">
             <div class="row" >
