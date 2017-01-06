@@ -9,7 +9,7 @@
             <div class="col-md-6 col-sm-6 col-lg-7 col-xs-6" style="padding-right: 12%;">
                 <div class="caption tituloCurso text-uppercase"><br>{{$curso->course_name}}</div>
                 <div class="caption fechaCurso"> {{ $curso->inicio }} | {{$curso->fin}}</div>
-                <div class="btnCurso"><a href="http://www.mexicox.gob.mx/courses/{{$curso->course_id}}/about"><i class="fa fa-chevron-right btnFlecha" aria-hidden="true"></i></a></div>
+                <div class="btnCurso"><a href="http://mx.mexicox.gob.mx/courses/{{$curso->course_id}}/about"><i class="fa fa-chevron-right btnFlecha" aria-hidden="true"></i></a></div>
             </div>
 			{{--*/ $fechaHoy = date_create('now'); /*--}}
 			@if($fechaHoy < date_create($curso->inicio_inscripcion))
