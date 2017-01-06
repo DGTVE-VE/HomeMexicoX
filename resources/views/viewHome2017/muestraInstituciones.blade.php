@@ -8,8 +8,8 @@
         /*		border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px;*/
     }
     .dropbtn{
-        width: 130px !important;
-        border: 1px solid black !important;
+/*        width: 10px !important;
+        border: 1px solid black !important;*/
     }
 </style>
 <link rel="stylesheet" href="{{asset('css/muestraInstituciones.css')}}"/>

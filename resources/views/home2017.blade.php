@@ -24,7 +24,7 @@ and open the template in the editor.
         <link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
         <!--favicon-->
-        <link rel="shortcut icon" href="{{ asset('mexicox.ico') }}" >
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" >
         <!--Css extra-->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/estilo.css') }}">
     </head>

@@ -6,13 +6,13 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="{{'img/banner_mexicox.png'}}" alt="First slide">
+      <img src="{{'img/banner1.jpg'}}" alt="First slide">
     </div>
     <div class="item">
-      <img src="{{'img/banner_mexicox.png'}}" alt="Second slide">
+      <img src="{{'img/banner2.jpg'}}" alt="Second slide">
     </div>
     <div class="item">
-      <img src="{{'img/banner_mexicox.png'}}" alt="Third slide">
+      <img src="{{'img/banner3.jpg'}}" alt="Third slide">
     </div>
   </div>
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
