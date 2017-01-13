@@ -6,13 +6,13 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="{{'img/banner1.jpg'}}" alt="First slide">
+      <img src="{{'img/banner1.jpg'}}" alt="First slide" class="imgBanner">
     </div>
     <div class="item">
-      <img src="{{'img/banner2.jpg'}}" alt="Second slide">
+      <img src="{{'img/banner2.jpg'}}" alt="Second slide" class="imgBanner">
     </div>
     <div class="item">
-      <img src="{{'img/banner3.jpg'}}" alt="Third slide">
+      <img src="{{'img/banner3.jpg'}}" alt="Third slide" class="imgBanner">
     </div>
   </div>
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -24,6 +24,11 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<style>
+	.imgBanner{
+		width:100%;
+	}
+</style>
 <script>
     $('.carousel').carousel({
         interval: 2000
