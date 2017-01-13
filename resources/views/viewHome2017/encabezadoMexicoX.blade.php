@@ -43,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="http://mexicox.gob.mx/"><img class="img-responsive logoPrincipal" src="img/logo.png"></a>
+        <a href="http://mx.mexicox.gob.mx/"><img class="img-responsive logoPrincipal" src="img/logo.png"></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse pull-right">
         <ul class="nav navbar-nav">
@@ -57,9 +57,9 @@
                     @endforeach
                 </ul>
             </li>
-            <li><input type="button" class="btnmorado" value="Registrate" onclick="window.location.href = 'http://mx.televisioneducativa.gob.mx/register?next=%2Fdashboard'"></li>
+            <li><input type="button" class="btnmorado" value="Registrate" onclick="window.location.href = 'http://mx.mexicox.gob.mx/register?next=%2Fdashboard'"></li>
 
-            <li><input type="button" class="btnverde" value="Iniciar Sesión" onclick="window.location.href = 'http://mx.televisioneducativa.gob.mx/login'"></li>            
+            <li><input type="button" class="btnverde" value="Iniciar Sesión" onclick="window.location.href = 'http://mx.mexicox.gob.mx/login'"></li>            
             <li class="buscar">
                 <div class="navbar-form">
                     <div class="input-group">
