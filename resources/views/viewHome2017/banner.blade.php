@@ -31,6 +31,6 @@
 </style>
 <script>
     $('.carousel').carousel({
-        interval: 2000
+        interval: 5000
     })
 </script>
