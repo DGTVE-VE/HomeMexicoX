@@ -76,7 +76,7 @@ class MexicoxController extends Controller {
     /*  *****   Consulta instituciones con cursos al seleccionar una categoría en el menú principal *****    */
     public function obtenerInstituciones($categoria) {
         if ($categoria == '0') {
-            $instituciones = DB::select("select a.institucion from course_name a, curso_categoria b, categorias c
+            $instituciones = DB::select("select distinct(a.institucion) from course_name a, curso_categoria b, categorias c
                                     where a.id = b.id_curso and  b.id_categoria = c.id and a.course_id is not null 
                                     and trim(a.course_id)!='' and a.activo=1 order by inicio desc limit 9");
         } else {
