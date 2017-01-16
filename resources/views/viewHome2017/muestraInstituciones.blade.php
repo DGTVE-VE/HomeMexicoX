@@ -7,15 +7,19 @@
         cursor: pointer;
         /*		border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px;*/
     }
+	.altoListaInst{
+		height:300px;
+		width:100%
+	}
     .dropbtn{
 /*        width: 10px !important;
         border: 1px solid black !important;*/
     }
 </style>
 <link rel="stylesheet" href="{{asset('css/muestraInstituciones.css')}}"/>
-<div class="dropdown">
+<div class="dropdown" style="">
     <button id="myBtn" class="dropbtn redondeaDiv">Institución<span class="caret"></span></button>
-    <div id="myDropdown" class="dropdown-content redondeaDiv">
+    <div id="myDropdown" class="dropdown-content redondeaDiv altoListaInst">
         @foreach($instituciones as $institucion)    
         <a href="#" onclick="ocultaLista('{{$institucion->institucion}}')">{{$institucion->institucion}}</a>
         @endforeach
