@@ -3,11 +3,16 @@
 @foreach($cursosFiltrados as $curso)
     <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 cuadroCurso">
         <div class="col-md-11 col-md-offset-1 cuadro box">
+            <div class="btnCurso" style="position: absolute; right:15px; bottom: 15px;"><a href="http://mx.mexicox.gob.mx/courses/{{$curso->course_id}}/about"><img style="width:8%;" class="pull-right" src="{{asset('img/botonIrCurso.png')}}" ></a></div>
             <div class="col-md-6 col-sm-6 col-lg-5 col-xs-6 imgCurso">
                 <img class="foto pull-left img-responsive" src="{{$curso->thumbnail}}">
             </div>
             <div class="col-md-6 col-sm-6 col-lg-7 col-xs-6" style="padding-right: 12%;">
-                <div class="caption tituloCurso text-uppercase"><br>{{$curso->course_name}}</div>
+                @if(strlen($curso->course_name) < 60)
+					<div class="caption tituloCurso text-uppercase"><br>{{$curso->course_name}}</div>
+				@else
+					<div class="caption tituloCurso text-uppercase"><br>{{substr($curso->course_name, 0, 60).'...'}}</div>
+				@endif
 				@if($fechaHoy < date_create($curso->fin_inscripcion))
 					<div class="caption fechaCurso"> Fin inscripciones: <span style="color:white;">{{ $curso->fin_inscripcion }}</span></div>
 				@endif
@@ -15,7 +20,6 @@
 				@if($fechaHoy > date_create($curso->fin_inscripcion))
 					<div class="caption fechaCurso"> Fin Curso: <span style="color:white;">{{ $curso->fin }}</span></div>
 				@endif
-                <div class="btnCurso"><a href="http://mx.mexicox.gob.mx/courses/{{$curso->course_id}}/about"><img style="width:15%;" class=" pull-right" src="{{asset('img/botonIrCurso.png')}}" ></a></div>
             </div>
 			@if($fechaHoy < date_create($curso->inicio_inscripcion))
 				<div class="ribbon"><span>Reciente</span></div>
