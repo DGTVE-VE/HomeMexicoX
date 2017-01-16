@@ -52,7 +52,7 @@
                 <ul class="dropdown-menu">
                     {{--*/ $cont = 1; /*--}}
                     @foreach($categorias as $categoria)
-                    <li><a class="ligaCategoria" value="{{$cont}}">{{$categoria->categoria}}</a></li>
+                    <li><a class="ligaCategoria" value="{{$categoria->id}}">{{$categoria->categoria}}</a></li>
                     {{--*/ $cont++; /*--}}
                     @endforeach
                 </ul>
