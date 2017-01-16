@@ -1,4 +1,4 @@
-{{--*/ $i=1; /*--}}
+{{--*/ $i=1; $fechaHoy = date_create('now');/*--}}
 <br>
 @foreach($cursosFiltrados as $curso)
     <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 cuadroCurso">
@@ -8,10 +8,15 @@
             </div>
             <div class="col-md-6 col-sm-6 col-lg-7 col-xs-6" style="padding-right: 12%;">
                 <div class="caption tituloCurso text-uppercase"><br>{{$curso->course_name}}</div>
-                <div class="caption fechaCurso"> {{ $curso->inicio }} | {{$curso->fin}}</div>
-                <div class="btnCurso"><a href="http://mx.mexicox.gob.mx/courses/{{$curso->course_id}}/about"><img style="width:15%;" src="{{asset('img/botonIrCurso.png')}}" ></a></div>
+				@if($fechaHoy < date_create($curso->fin_inscripcion))
+					<div class="caption fechaCurso"> Fin inscripciones: <span style="color:white;">{{ $curso->fin_inscripcion }}</span></div>
+				@endif
+				<div class="caption fechaCurso"> Inicio Curso: <span style="color:white;">{{ $curso->inicio }}</span></div>
+				@if($fechaHoy > date_create($curso->fin_inscripcion))
+					<div class="caption fechaCurso"> Fin Curso: <span style="color:white;">{{ $curso->fin }}</span></div>
+				@endif
+                <div class="btnCurso"><a href="http://mx.mexicox.gob.mx/courses/{{$curso->course_id}}/about"><img style="width:15%;" class=" pull-right" src="{{asset('img/botonIrCurso.png')}}" ></a></div>
             </div>
-			{{--*/ $fechaHoy = date_create('now'); /*--}}
 			@if($fechaHoy < date_create($curso->inicio_inscripcion))
 				<div class="ribbon"><span>Reciente</span></div>
 			@elseif($fechaHoy >= date_create($curso->inicio_inscripcion) && $fechaHoy <= date_create($curso->fin_inscripcion))
