@@ -16,9 +16,9 @@
 				@if($fechaHoy < date_create($curso->fin_inscripcion))
 					<div class="caption fechaCurso"> Fin inscripciones: <span style="color:white;">{{ $curso->fin_inscripcion }}</span></div>
 				@endif
-				<div class="caption fechaCurso"> Inicio Curso: <span style="color:white;">{{ $curso->inicio }}</span></div>
+				<div class="caption fechaCurso"> Inicio curso: <span style="color:white;">{{ $curso->inicio }}</span></div>
 				@if($fechaHoy > date_create($curso->fin_inscripcion))
-					<div class="caption fechaCurso"> Fin Curso: <span style="color:white;">{{ $curso->fin }}</span></div>
+					<div class="caption fechaCurso"> Fin curso: <span style="color:white;">{{ $curso->fin }}</span></div>
 				@endif
             </div>
 			@if($fechaHoy < date_create($curso->inicio_inscripcion))
