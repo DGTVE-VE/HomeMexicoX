@@ -25,7 +25,7 @@
     </a>
 </div>
 <div class="col-md-1 col-sm-4 col-xs-6 col-lg-1">
-    <a href="http://front.mexicox.gob.mx/">
+    <a href="http://mexicox.gob.mx/">
         <img src="img/mexicox.png" alt="MéxicoX" width="100">
     </a>
 </div>

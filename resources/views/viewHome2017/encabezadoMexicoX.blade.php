@@ -43,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="http://mx.mexicox.gob.mx/"><img class="img-responsive logoPrincipal" src="img/logo.png"></a>
+        <a href="http://mexicox.gob.mx/"><img class="img-responsive logoPrincipal" src="img/logo.png"></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse pull-right">
         <ul class="nav navbar-nav">
