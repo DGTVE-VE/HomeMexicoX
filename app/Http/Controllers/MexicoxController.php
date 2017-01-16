@@ -34,11 +34,9 @@ class MexicoxController extends Controller {
                                 and  b.id_categoria = c.id
                                 and a.course_id is not null 
                                 and trim(a.course_id)!='' and a.activo=1 order by categoria asc");
-        $cursosTodos = DB::select("select  c.categoria,a.course_name,a.course_id, a.inicio, a.fin,a.inicio_inscripcion,a.fin_inscripcion,a.descripcion,a.thumbnail,a.institucion
-                                    from course_name a, curso_categoria b, categorias c
-                                    where a.id = b.id_curso 
-                                    and  b.id_categoria = c.id
-                                    and a.course_id is not null 
+        $cursosTodos = DB::select("select a.course_name,a.course_id, a.inicio, a.fin,a.inicio_inscripcion,a.fin_inscripcion,a.descripcion,a.thumbnail,a.institucion
+                                    from course_name a
+                                    where a.course_id is not null 
                                     and trim(a.course_id)!='' and a.activo=1 order by inicio desc");
         $categorias = DB::select("select id, categoria from categorias order by categoria");
         return view('viewHome2017/mexicox')->with('cursos', $cursosTodos)->with('clasifica', $clasifica)->with('categorias', $categorias);
@@ -47,11 +45,9 @@ class MexicoxController extends Controller {
     /*  *****   Filtra cursos por categoria en clic de categorias de menu principal ****    */
     public function filtroCursos($categoria) {
         if ($categoria == '0') {
-            $cursosRecientes = DB::select("select  c.categoria,a.course_name,a.course_id, a.inicio, a.fin,a.inicio_inscripcion,a.fin_inscripcion,a.descripcion,a.thumbnail,a.institucion
-                                    from course_name a, curso_categoria b, categorias c
-                                    where a.id = b.id_curso 
-                                    and  b.id_categoria = c.id
-                                    and a.course_id is not null 
+            $cursosRecientes = DB::select("select a.course_name,a.course_id, a.inicio, a.fin,a.inicio_inscripcion,a.fin_inscripcion,a.descripcion,a.thumbnail,a.institucion
+                                    from course_name a
+                                    where a.course_id is not null 
                                     and trim(a.course_id)!='' and a.activo=1 order by inicio desc limit 9");
         } else {
             $cursosRecientes = DB::select("SELECT * FROM course_name a inner join curso_categoria b
@@ -80,7 +76,7 @@ class MexicoxController extends Controller {
     /*  *****   Consulta instituciones con cursos al seleccionar una categoría en el menú principal *****    */
     public function obtenerInstituciones($categoria) {
         if ($categoria == '0') {
-            $instituciones = DB::select("select a.institucion from course_name a, curso_categoria b, categorias c
+            $instituciones = DB::select("select distinct(a.institucion) from course_name a, curso_categoria b, categorias c
                                     where a.id = b.id_curso and  b.id_categoria = c.id and a.course_id is not null 
                                     and trim(a.course_id)!='' and a.activo=1 order by inicio desc limit 9");
         } else {
