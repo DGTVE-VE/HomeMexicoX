@@ -77,13 +77,13 @@ class MexicoxController extends Controller {
     /*  *****   Consulta instituciones con cursos al seleccionar una categoría en el menú principal *****    */
     public function obtenerInstituciones($categoria) {
         if ($categoria == '0') {
-            $instituciones = DB::select("select distinct(a.institucion) from course_name a, curso_categoria b, categorias c
+            $instituciones = DB::select("select distinct(a.nombre_institucion), a.institucion from course_name a, curso_categoria b, categorias c
                                     where a.id = b.id_curso and  b.id_categoria = c.id and a.course_id is not null 
-                                    and trim(a.course_id)!='' and a.activo=1 order by a.institucion");
+                                    and trim(a.course_id)!='' and a.activo=1 order by a.nombre_institucion");
         } else {
-            $instituciones = DB::select("SELECT a.institucion FROM course_name a inner join curso_categoria b
+            $instituciones = DB::select("SELECT distinct(a.nombre_institucion), a.institucion FROM course_name a inner join curso_categoria b
                 on a.id = b.id_curso where b.id_categoria = " . $categoria . "
-                and a.course_id is not null and trim(a.course_id)!='' and a.activo=1 group by institucion order by inicio desc");
+                and a.course_id is not null and trim(a.course_id)!='' and a.activo=1 order by a.nombre_institucion desc");
         }
         return view('viewHome2017/muestraInstituciones')->with('instituciones', $instituciones)->with('categoria',$categoria);
     }

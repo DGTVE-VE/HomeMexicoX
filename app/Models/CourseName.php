@@ -65,6 +65,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          type="string"
  *      ),
  *      @SWG\Property(
+ *          property="nombre_institucion",
+ *          description="nombre_institucion",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
  *          property="activo",
  *          description="activo",
  *          type="boolean"
@@ -94,6 +99,7 @@ class CourseName extends Model
         'descripcion',
         'thumbnail',
         'institucion',
+		'nombre_institucion',
         'activo'
     ];
 
@@ -113,6 +119,7 @@ class CourseName extends Model
         'descripcion' => 'string',
         'thumbnail' => 'string',
         'institucion' => 'string',
+		'nombre_institucion' => 'string',
         'activo' => 'boolean'
     ];
 

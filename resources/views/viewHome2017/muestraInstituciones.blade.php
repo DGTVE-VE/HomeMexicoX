@@ -21,7 +21,7 @@
     <button id="myBtn" class="dropbtn redondeaDiv">Institución<span class="caret"></span></button>
     <div id="myDropdown" class="dropdown-content redondeaDiv altoListaInst">
         @foreach($instituciones as $institucion)    
-        <a href="#" onclick="ocultaLista('{{$institucion->institucion}}')">{{$institucion->institucion}}</a>
+        <a href="#" onclick="ocultaLista('{{$institucion->institucion}}')">{{$institucion->nombre_institucion}}</a>
         @endforeach
     </div>
 </div>
