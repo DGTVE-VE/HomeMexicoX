@@ -51,7 +51,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
                 <ul class="dropdown-menu">
 					<li><a class="ligaCategoria" value="0">Recientes</a></li>
-					<li><hr style="color: #0056b2; width:90%" /></li>
+					<li><hr style="color: #0056b2;" /></li>
 					{{--*/ $cont = 1; /*--}}
                     @foreach($categorias as $categoria)
                     <li><a class="ligaCategoria" value="{{$categoria->id}}">{{$categoria->categoria}}</a></li>

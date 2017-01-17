@@ -1,7 +1,26 @@
-.dropbtn {
-    width: 290px !important;
+@media(max-width:767px){
+    .dropbtn {
+        width: 150px !important;
+    }
 }
 
+@media(min-width:768px){
+    .dropbtn {
+        width: 150px !important;
+    }
+}
+
+@media(min-width:992px){
+    .dropbtn {
+        width: 250px !important;
+    }
+}
+
+@media(min-width:1200px){
+    .dropbtn {
+        width: 290px !important;
+    }
+}
 
 .dropbtn:hover, .dropbtn:focus {
     background-color: #3e8e41;
