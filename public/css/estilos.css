@@ -8,6 +8,82 @@ and open the template in the editor.
     Author     : SMARTINEZ
 */
 
+@media (min-width: 200px) { 
+    .tituloCurso{
+        font-size: 9px;
+        color: white !important;
+    }
+    .fechaCurso{
+        font-size: 9px;
+    }    
+}
+@media (min-width: 425px) { 
+    .tituloCurso{
+        font-size: 11px;
+        color: white !important;
+    }
+    .fechaCurso{
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) { 
+    .tituloCurso{
+        font-size: 10px;
+        color: white;
+    }
+    .fechaCurso{
+        font-size: 10px;
+    }     
+    .lineaCursos{
+        margin-left: -30%;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .tituloCurso{
+        font-size: 8px;
+        color: white;
+    }
+    .fechaCurso{
+        font-size: 8px;
+    }
+    .lineaCursos{
+        margin-left: -5%;    
+    }
+
+}
+
+@media (min-width: 1200px) { 
+    .tituloCurso{
+        font-size: 13px;
+        color: white;
+    }
+    .fechaCurso{
+        font-size: 13px;
+    }
+    .lineaCursos{
+        margin-left: 8%;
+    }
+
+}
+
+@media (min-width: 1440px) { 
+    .lineaCursos{margin-right: -25%;}
+}
+@media (min-width: 2000px) {
+	    .tituloCurso{
+        font-size: 16px;
+        color: white;
+    }
+    .fechaCurso{
+        font-size: 16px;
+    }
+}
+@media (min-width: 2560px) {
+    .lineaCursos{margin-right: 5%;}
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -49,7 +125,6 @@ body {
     -moz-border-radius: 42px 35px 35px 42px;
     -webkit-border-radius: 42px 35px 35px 42px;
 }
-
 
 .fechaCurso{
     color: #a482f6;
@@ -114,73 +189,7 @@ body {
     border-right: 2px solid black !important; 
     height: 25px;
 }
-/*#contenedorCursos{margin-bottom: 2%;}*/
-@media (max-width: 320px) { 
-    .tituloCurso{
-        font-size: 8px;
-        color: white !important;
-    }
-    .fechaCurso{
-        font-size: 6px;
-    }    
-}
-@media (min-width: 425px) { 
-    .tituloCurso{
-        font-size: 10px;
-        color: white !important;
-    }
-    .fechaCurso{
-        font-size: 10px;
-    }
-}
 
-@media (min-width: 768px) { 
-    .tituloCurso{
-        font-size: 11px;
-        color: white;
-    }
-    .fechaCurso{
-        font-size: 10px;
-    }     
-    .lineaCursos{
-        margin-left: -30%;
-    }
-}
-
-@media (min-width: 1024px) { 
-    .tituloCurso{
-        font-size: 8px;
-        color: white;
-    }
-    .fechaCurso{
-        font-size: 8px;
-    }
-    .lineaCursos{
-        margin-left: -5%;    
-    }
-
-}
-
-@media (min-width: 1200px) { 
-    .tituloCurso{
-        font-size: 13px;
-        color: white;
-    }
-    .fechaCurso{
-        font-size: 13px;
-    }
-    .lineaCursos{
-        margin-left: 8%;
-    }
-
-}
-
-@media (min-width: 1440px) { 
-    .lineaCursos{margin-right: -25%;}
-}
-@media (min-width: 2560px) { 
-    .lineaCursos{margin-right: 5%;}
-}
 /*Pleca de cuadro de curso (status)*/
 .ribbon {
     position: absolute;

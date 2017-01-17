@@ -26,7 +26,7 @@ and open the template in the editor.
         <!--favicon-->
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" >
         <!--Css extra-->
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/estilo.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/estilos.css') }}">
     </head>
     <body>
         <header>

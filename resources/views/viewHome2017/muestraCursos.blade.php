@@ -14,11 +14,11 @@
 					<div class="caption tituloCurso text-uppercase"><br>{{substr($curso->course_name, 0, 60).'...'}}</div>
 				@endif
 				@if($fechaHoy < date_create($curso->fin_inscripcion))
-					<div class="caption fechaCurso"> Fin inscripciones: <span style="color:white;">{{ $curso->fin_inscripcion }}</span></div>
+					<div class="caption fechaCurso"> Fin inscripciones: <br class="visible-xs"/><span class="tituloCurso">{{ $curso->fin_inscripcion }}</span></div>
 				@endif
-				<div class="caption fechaCurso"> Inicio curso: <span style="color:white;">{{ $curso->inicio }}</span></div>
+				<div class="caption fechaCurso"> Inicio curso: <br class="visible-xs"/><span class="tituloCurso">{{ $curso->inicio }}</span></div>
 				@if($fechaHoy > date_create($curso->fin_inscripcion))
-					<div class="caption fechaCurso"> Fin curso: <span style="color:white;">{{ $curso->fin }}</span></div>
+					<div class="caption fechaCurso"> Fin curso: <br class="visible-xs"/><span class="tituloCurso">{{ $curso->fin }}</span></div>
 				@endif
             </div>
 			@if($fechaHoy < date_create($curso->inicio_inscripcion))
@@ -34,13 +34,17 @@
 			@endif
         </div>
     </div>
+	<div class="col-xs-12 visible-xs" style="padding:10px;"></div>
+	@if($i%2==0)
+        <div class="col-sm-12 visible-sm" style="padding:10px;"></div>
+    @endif
     @if($i%3==0)
-        <div class="col-md-12" style="padding:10px;"></div>
+        <div class="col-lg-12 col-md-12" style="padding:10px;"></div>
     @endif
     {{--*/ $i++; /*--}}
 @endforeach
 @if($i==1)
-    <div class="col-md-10 col-md-offset-2"><h3>Por el momento no hay cursos activos para esta clasificación </h3></div>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-lg-offset-1 col-md-offset-2 col-sm-offset-2"><h3>Por el momento no hay cursos activos para esta clasificación </h3></div>
 @endif
 @if(($i-1)%3!=0 || $i==1)
     <div class="col-md-12" style="padding:10px;"></div>
