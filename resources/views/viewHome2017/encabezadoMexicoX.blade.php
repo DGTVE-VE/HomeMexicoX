@@ -34,6 +34,17 @@
 	.logoPrincipal{
 		margin-left:10px;
 	}
+    @media(max-width:767px){
+        .esquinaDerecha{
+            float: left !important;            
+        }
+    }
+    @media(min-width:768px){
+        .esquinaDerecha{
+            float: right !important;            
+        }
+    }
+
 </style>
 <nav class="navbar navbar-default navbar-fixed-top barra">
     <div class="navbar-header">
@@ -45,7 +56,7 @@
         </button>
         <a href="http://mexicox.gob.mx/"><img class="img-responsive logoPrincipal" src="img/logo.png"></a>
     </div>
-    <div id="navbar" class="collapse navbar-collapse pull-right">
+    <div id="navbar" class="collapse navbar-collapse esquinaDerecha">
         <ul class="nav navbar-nav">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cursos <span class="caret"></span></a>
