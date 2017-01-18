@@ -77,30 +77,30 @@
     </div><!--/.nav-collapse -->
 </nav>
 <script>
-	$('#termino').keypress(function(e) {
-		if(e.which == 13) {
-			busquedaCurso();
-		}
-	});
-	function busquedaCurso(){
-		variable = $('#termino').val();
-		$.ajax({
-			method: "POST",
-			url: "{{url('Home2017/buscaCurso')}}",
-			data: {
-				termino: variable,
-				_token: "{{csrf_token()}}"
-			},
-			error: function (ts) {
-				console.log(ts.responseText);
-			}
-		})
-		.done(function (msg) {
-			$("#contenedorCursos").empty(msg);
-			$("#contenedorCursos").append(msg);
-			$("#clasificacion").empty();
-			$("#clasificacion").append('Resultado de la busqueda');
-			$("#selectInstitucion").empty();
-		});
-	}
+    $('#termino').keypress(function(e) {
+        if(e.which == 13) {
+            busquedaCurso();
+        }
+    });
+    function busquedaCurso(){
+        variable = $('#termino').val();
+        $.ajax({
+            method: "POST",
+            url: "{{url('Home2017/buscaCurso')}}",
+            data: {
+                termino: variable,
+                _token: "{{csrf_token()}}"
+            },
+            error: function (ts) {
+                console.log(ts.responseText);
+            }
+        })
+        .done(function (msg) {
+            $("#contenedorCursos").empty(msg);
+            $("#contenedorCursos").append(msg);
+            $("#clasificacion").empty();
+            $("#clasificacion").append('Resultado de la busqueda');
+            $("#selectInstitucion").empty();
+        });
+    }
 </script>

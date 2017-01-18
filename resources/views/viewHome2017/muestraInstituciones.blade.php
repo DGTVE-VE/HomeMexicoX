@@ -7,17 +7,17 @@
         cursor: pointer;
         /*		border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px;*/
     }
-	.altoListaInst{
-		height:300px;
-		width:100%
-	}
+    .altoListaInst{
+        height:300px;
+        width:100%
+    }
     .dropbtn{
 /*        width: 10px !important;
         border: 1px solid black !important;*/
     }
 </style>
 <link rel="stylesheet" href="{{asset('css/muestraInstituciones.css')}}"/>
-<div class="dropdown" style="">
+<div class="dropdown" onfocusout="cierraLista()">
     <button id="myBtn" class="dropbtn redondeaDiv">Institución<span class="caret"></span></button>
     <div id="myDropdown" class="dropdown-content redondeaDiv altoListaInst">
         @foreach($instituciones as $institucion)    
@@ -26,27 +26,30 @@
     </div>
 </div>
 <script>
-            document.getElementById("myBtn").onclick = function() {muestraLista()};
-            function muestraLista() {
-            document.getElementById("myDropdown").classList.toggle("show");
-                    }
+    document.getElementById("myBtn").onclick = function() {muestraLista()};
+    function muestraLista() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    function cierraLista(){
+        setTimeout(function(){ $('#myDropdown').removeClass("show"); },100);
+    }
     function ocultaLista(institucion) {
-    document.getElementById("myDropdown").classList.toggle("show");
-            $.ajax({
-            method: "POST",
-                    url: "{{url('Home2017/cursosInstitucion')}}",
-                    data: {
-                    cat: "{{$categoria}}",
-                            imparte: institucion,
-                            _token: "{{csrf_token()}}"
-                    },
-                    error: function (ts) {
-                    console.log(ts.responseText);
-                    }
-            })
-            .done(function (msg) {
-            $("#contenedorCursos").empty();
-                    $("#contenedorCursos").append(msg)
-            });
-            }
+        $('#myDropdown').removeClass("show");
+        $.ajax({
+        method: "POST",
+                url: "{{url('Home2017/cursosInstitucion')}}",
+                data: {
+                cat: "{{$categoria}}",
+                        imparte: institucion,
+                        _token: "{{csrf_token()}}"
+                },
+                error: function (ts) {
+                console.log(ts.responseText);
+                }
+        })
+        .done(function (msg) {
+        $("#contenedorCursos").empty();
+                $("#contenedorCursos").append(msg)
+        });
+    }
 </script>
