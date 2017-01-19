@@ -70,7 +70,7 @@ class MexicoxController extends Controller {
         $institucion = $_POST['imparte'];
         $cursosRecientes = DB::select("SELECT * FROM course_name a inner join curso_categoria b
             on a.id = b.id_curso where a.institucion = '" . $institucion . 
-            "'" . $condicionCat . " and a.course_id is not null and trim(a.course_id)!='' and a.activo=1 order by inicio desc;");
+            "'" . $condicionCat . " and a.course_id is not null and trim(a.course_id)!='' and a.activo=1 group by course_id order by inicio desc;");
         return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
     }
     
@@ -94,8 +94,6 @@ class MexicoxController extends Controller {
         $cursosRecientes = Course_name::whereRaw("match(course_name,descripcion)"
                 . "against('$termino') "
                 . "and course_id is not null and trim(course_id)!=''")->get();
-        
-        //dd( $cursos);
 		return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
     }
 
