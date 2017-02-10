@@ -3,39 +3,39 @@
 @foreach($cursosFiltrados as $curso)
     <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 cuadroCurso">
         <div class="col-md-11 col-md-offset-1 cuadro box">
-            <div class="btnCurso" style="position: absolute; right:15px; bottom: 15px; z-index:1;"><a href="http://mx.mexicox.gob.mx/courses/{{$curso->course_id}}/about"><img style="width:7%;" class="pull-right" src="{{asset('img/botonIrCurso.png')}}" ></a></div>
+            <div class="btnCurso" style="position: absolute; right:15px; bottom: 15px; z-index:1;"><a href="http://mx.mexicox.gob.mx/courses/{{$curso->id_curso}}/about"><img style="width:7%;" class="pull-right" src="{{asset('img/botonIrCurso.png')}}" ></a></div>
             <div class="col-md-6 col-sm-6 col-lg-5 col-xs-6 imgCurso">
-                <img class="foto pull-left img-responsive" src="{{$curso->thumbnail}}">
+                <img class="foto pull-left img-responsive" src="http://mx.mexicox.gob.mx{{$curso->thumbnail}}">
             </div>
             <div class="col-md-6 col-sm-6 col-lg-7 col-xs-6" style="padding-right: 12%;">
-                @if(strlen($curso->course_name) < 60)
-					<div class="caption tituloCurso text-uppercase"><br>{{$curso->course_name}}</div>
-				@else
-					<div class="caption tituloCurso text-uppercase"><br>{{substr($curso->course_name, 0, 60).'...'}}</div>
-				@endif
-				@if($fechaHoy < date_create($curso->fin_inscripcion))
-					<div class="caption fechaCurso"> Fin inscripciones: <br class="visible-xs"/><span class="tituloCurso">{{ $curso->fin_inscripcion }}</span></div>
-				@endif
-				<div class="caption fechaCurso"> Inicio curso: <br class="visible-xs"/><span class="tituloCurso">{{ $curso->inicio }}</span></div>
-				@if($fechaHoy > date_create($curso->fin_inscripcion))
-					<div class="caption fechaCurso"> Fin curso: <br class="visible-xs"/><span class="tituloCurso">{{ $curso->fin }}</span></div>
-				@endif
+                @if(strlen($curso->nombreCurso) < 60)
+                    <div class="caption tituloCurso text-uppercase"><br>{{$curso->nombreCurso}}</div>
+                @else
+                    <div class="caption tituloCurso text-uppercase"><br>{{substr($curso->nombreCurso, 0, 60).'...'}}</div>
+                @endif
+                @if($fechaHoy < date_create($curso->finInscripcion))
+                    <div class="caption fechaCurso"> Fin inscripciones: <br class="visible-xs"/><span class="tituloCurso">{{ substr($curso->finInscripcion, 0, 10) }}</span></div>
+                @endif
+                <div class="caption fechaCurso"> Inicio curso: <br class="visible-xs"/><span class="tituloCurso">{{ substr($curso->inicioCurso, 0, 10) }}</span></div>
+                @if($fechaHoy > date_create($curso->finInscripcion))
+                    <div class="caption fechaCurso"> fin curso: <br class="visible-xs"/><span class="tituloCurso">{{ substr($curso->finCurso, 0, 10) }}</span></div>
+                @endif
             </div>
-			@if($fechaHoy < date_create($curso->inicio_inscripcion))
-				<div class="ribbon"><span>Reciente</span></div>
-			@elseif($fechaHoy >= date_create($curso->inicio_inscripcion) && $fechaHoy <= date_create($curso->fin_inscripcion))
-				<div class="ribbon"><span>Inscripciones</span></div>
-			@elseif($fechaHoy >= date_create($curso->fin_inscripcion) && $fechaHoy <= date_create($curso->inicio))
-				<div class="ribbon"><span style="background: linear-gradient(#ebb943 0%, #D03B30 100%) !important;">Por Iniciar</span></div>
-			@elseif($fechaHoy >= date_create($curso->inicio) && $fechaHoy <= date_create($curso->fin))
-				<div class="ribbon"><span style="background: linear-gradient(#3bbf2a 0%, #5fbf3d 100%) !important;">En curso</span></div>
-			@elseif($fechaHoy > date_create($curso->fin))
-				<div class="ribbon"><span style="background: linear-gradient(#999999 0%, #666666 100%) !important;">Finalizado</span></div>
-			@endif
+            @if($fechaHoy < date_create($curso->inicioInscripcion))
+                <div class="ribbon"><span>Reciente</span></div>
+            @elseif($fechaHoy >= date_create($curso->inicioInscripcion) && $fechaHoy <= date_create($curso->finInscripcion))
+                <div class="ribbon"><span>Inscripciones</span></div>
+            @elseif($fechaHoy >= date_create($curso->finInscripcion) && $fechaHoy <= date_create($curso->inicioCurso))
+                <div class="ribbon"><span style="background: linear-gradient(#ebb943 0%, #D03B30 100%) !important;">Por Iniciar</span></div>
+            @elseif($fechaHoy >= date_create($curso->inicioCurso) && $fechaHoy <= date_create($curso->finCurso))
+                <div class="ribbon"><span style="background: linear-gradient(#3bbf2a 0%, #5fbf3d 100%) !important;">En curso</span></div>
+            @elseif($fechaHoy > date_create($curso->finCurso))
+                <div class="ribbon"><span style="background: linear-gradient(#999999 0%, #666666 100%) !important;">Finalizado</span></div>
+            @endif
         </div>
     </div>
-	<div class="col-xs-12 visible-xs" style="padding:10px;"></div>
-	@if($i%2==0)
+    <div class="col-xs-12 visible-xs" style="padding:10px;"></div>
+    @if($i%2==0)
         <div class="col-sm-12 visible-sm" style="padding:10px;"></div>
     @endif
     @if($i%3==0)
