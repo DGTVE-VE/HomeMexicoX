@@ -13,22 +13,6 @@ use App\Model\Course_overviews_courseoverview;
 
 class MexicoxController extends Controller {
 
-    /*public function MexicoX() {
-        $clasifica = DB::select("select  distinct(c.categoria)
-                                from course_name a, curso_categoria b, categorias c
-                                where a.id = b.id_curso 
-                                and  b.id_categoria = c.id
-                                and a.course_id is not null 
-                                and trim(a.course_id)!='' and a.activo=1 order by categoria asc");
-        $cursosTodos = DB::select("select  c.categoria,a.course_name,a.course_id, a.inicio, a.fin,a.inicio_inscripcion,a.fin_inscripcion,a.descripcion,a.thumbnail,a.institucion
-                                    from course_name a, curso_categoria b, categorias c
-                                    where a.id = b.id_curso 
-                                    and  b.id_categoria = c.id
-                                    and a.course_id is not null 
-                                    and trim(a.course_id)!='' and a.activo=1 order by inicio desc");
-        return view('viewMexicoX/mexicox')->with('cursos', $cursosTodos)->with('clasifica', $clasifica);
-    }*/
-
     public function Home2017() {
         $categorias = DB::select("select id, categoria from categorias order by categoria");
         return view('viewHome2017/mexicox')->with('categorias', $categorias);
@@ -94,11 +78,12 @@ class MexicoxController extends Controller {
 
     public function buscar() {
         $termino = filter_input(INPUT_POST, 'termino');
-        $cursosRecientes = Course_name::whereRaw("match(display_name,short_description)"
-                   
-                . "against('$termino') "
-                . "and id is not null and trim(id)!=''")->get();
-        return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
-    }
 
+        $cursosRecientes = DB::select("SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
+            a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso
+            FROM course_name b inner join edxapp.course_overviews_courseoverview a on a.id = b.course_id 
+            where b.course_id is not null and trim(b.course_id)!='' and b.activo=1 
+            and match(a.display_name,a.short_description) against('".$termino."') order by inicio desc;");
+		return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
+    }
 }
