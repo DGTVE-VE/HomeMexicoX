@@ -13,7 +13,7 @@ use App\Model\Course_overviews_courseoverview;
 
 class MexicoxController extends Controller {
 
-    public function MexicoX() {
+    /*public function MexicoX() {
         $clasifica = DB::select("select  distinct(c.categoria)
                                 from course_name a, curso_categoria b, categorias c
                                 where a.id = b.id_curso 
@@ -27,7 +27,7 @@ class MexicoxController extends Controller {
                                     and a.course_id is not null 
                                     and trim(a.course_id)!='' and a.activo=1 order by inicio desc");
         return view('viewMexicoX/mexicox')->with('cursos', $cursosTodos)->with('clasifica', $clasifica);
-    }
+    }*/
 
     public function Home2017() {
         $categorias = DB::select("select id, categoria from categorias order by categoria");
@@ -44,7 +44,7 @@ class MexicoxController extends Controller {
         if ($categoria == '0') {
         $cursosRecientes = DB::select("SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
             a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso
-            FROM edxapp.course_overviews_courseoverview a inner join course_name b on a.id = b.course_id 
+            FROM course_name b inner join edxapp.course_overviews_courseoverview a on a.id = b.course_id 
             where b.course_id is not null and trim(b.course_id)!='' and b.activo=1 
             and a.enrollment_start < '".$fechaHoy."' and a.enrollment_end > '".$fechaHoy."' order by inicio desc;");
         } else {
@@ -94,8 +94,8 @@ class MexicoxController extends Controller {
 
     public function buscar() {
         $termino = filter_input(INPUT_POST, 'termino');
+        $cursosRecientes = Course_name::whereRaw("match(display_name,short_description)"
                    
-        $cursosRecientes = Course_overviews_courseoverview::whereRaw("match(display_name,short_description)"
                 . "against('$termino') "
                 . "and id is not null and trim(id)!=''")->get();
         return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
