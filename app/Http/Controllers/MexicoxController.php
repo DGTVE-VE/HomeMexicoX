@@ -65,13 +65,15 @@ class MexicoxController extends Controller {
     /*  *****   Consulta instituciones con cursos al seleccionar una categoría en el menú principal *****    */
     public function obtenerInstituciones($categoria) {
         if ($categoria == '0') {
-            $instituciones = DB::select("select distinct(a.nombre_institucion), a.institucion from course_name a
-                                    where a.course_id is not null 
-                                    and trim(a.course_id)!='' and a.activo=1 order by a.nombre_institucion");
+            $instituciones = DB::select("SELECT distinct(b.nombre_institucion), b. institucion
+                                FROM edxapp.course_overviews_courseoverview a INNER JOIN course_name b ON a.id = b.course_id
+                                WHERE a.id is not null AND trim(a.id)!='' AND b.activo=1 ORDER BY b.institucion");
         } else {
-            $instituciones = DB::select("SELECT distinct(a.nombre_institucion), a.institucion FROM course_name a inner join curso_categoria b
-                on a.id = b.id_curso where b.id_categoria = " . $categoria . "
-                and a.course_id is not null and trim(a.course_id)!='' and a.activo=1 order by a.nombre_institucion desc");
+            $instituciones = DB::select("SELECT DISTINCT(b.nombre_institucion), b. institucion
+                            FROM edxapp.course_overviews_courseoverview a INNER JOIN course_name b ON a.id = b.course_id
+                            INNER JOIN curso_categoria c ON b.id = c.id_curso
+                            WHERE c.id_categoria = " . $categoria . "
+                            AND a.id is not null AND trim(a.id)!='' AND b.activo=1 ORDER BY b.nombre_institucion desc");
         }
         return view('viewHome2017/muestraInstituciones')->with('instituciones', $instituciones)->with('categoria',$categoria);
     }
