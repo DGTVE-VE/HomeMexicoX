@@ -32,8 +32,7 @@ class MexicoxController extends Controller {
             WHERE b.course_id is not null AND TRIM(b.course_id)!='' AND b.activo=1 
             AND a.enrollment_end > '".$fechaHoy."' ORDER BY a.start desc;");
         } else {
-            $cursosRecientes = DB::select("
-            SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
+            $cursosRecientes = DB::select("SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
             a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso
             FROM curso_categoria c INNER JOIN course_name b ON b.id = c.id_curso 
 		    INNER JOIN edxapp.course_overviews_courseoverview a ON a.id = b.course_id 

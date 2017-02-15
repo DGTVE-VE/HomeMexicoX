@@ -1,51 +1,5 @@
-<style>
-    .barra{background: white; }   
-    .btnmorado{
-        font-weight: bold;
-        border-radius: 108px 108px 108px 108px;
-        -moz-border-radius: 108px 108px 108px 108px;
-        -webkit-border-radius: 108px 108px 108px 108px;
-        background: #34294f !important;
-        color: white;
-        margin-top: 7px;
-        padding:10px 20px 10px 20px;}
-    .btnverde{
-        font-weight: bold;
-        border-radius: 108px 108px 108px 108px;
-        -moz-border-radius: 108px 108px 108px 108px;
-        -webkit-border-radius: 108px 108px 108px 108px;
-        background: #06BB3A !important;
-        color: white;
-        margin-top: 7px;
-        padding:10px 20px 10px 20px;
-    }
-    .btnverde:hover{background: #05CB3D !important;}
-    .btnmorado:hover{background: #503F7C !important;}
-    .buscar{margin-top: 7px;}
-    .dropdown-menu > li > a:hover {
-        background-color: #503F7C;
-        color: white;
-    }   
-    .navbar-default .navbar-nav > .open > a,
-    .navbar-default .navbar-nav > .open > a:focus,
-    .navbar-default .navbar-nav > .open > a:hover {
-        background: white !important;
-    }
-	.logoPrincipal{
-		margin-left:10px;
-	}
-    @media(max-width:767px){
-        .esquinaDerecha{
-            float: left !important;            
-        }
-    }
-    @media(min-width:768px){
-        .esquinaDerecha{
-            float: right !important;            
-        }
-    }
-
-</style>
+<link rel="stylesheet" href="{{asset('css/encabezado.css')}}"/>
+    {{--*/ $urlBusuqeda = url('Home2017/buscaCurso') /*--}}
 <nav class="navbar navbar-default navbar-fixed-top barra">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -79,7 +33,7 @@
                         <input type="text" class="form-control" placeholder="Busqueda por curso" id="termino">
                          {{ csrf_field() }}
                         <div class="input-group-btn">
-                            <button class="btn btn-default" onclick="busquedaCurso()"><i class="glyphicon glyphicon-search"></i></button>
+                            <button class="btn btn-default" onclick="busquedaCurso('{{$urlBusuqeda}}', '{{csrf_token()}}')"><i class="glyphicon glyphicon-search"></i></button>
                         </div>
                     </div>
                 </div>
@@ -87,31 +41,11 @@
         </ul>
     </div><!--/.nav-collapse -->
 </nav>
+<script src="{{asset('js/encabezado.js')}}"></script>
 <script>
     $('#termino').keypress(function(e) {
         if(e.which == 13) {
-            busquedaCurso();
+            busquedaCurso("{{$urlBusuqeda}}", "{{csrf_token()}}");
         }
     });
-    function busquedaCurso(){
-        variable = $('#termino').val();
-        $.ajax({
-            method: "POST",
-            url: "{{url('Home2017/buscaCurso')}}",
-            data: {
-                termino: variable,
-                _token: "{{csrf_token()}}"
-            },
-            error: function (ts) {
-                console.log(ts.responseText);
-            }
-        })
-        .done(function (msg) {
-            $("#contenedorCursos").empty(msg);
-            $("#contenedorCursos").append(msg);
-            $("#clasificacion").empty();
-            $("#clasificacion").append('Resultado de la busqueda');
-            $("#selectInstitucion").empty();
-        });
-    }
 </script>
