@@ -14,7 +14,7 @@ use App\Model\Course_overviews_courseoverview;
 class MexicoxController extends Controller {
 
     public function Home2017() {
-        $categorias = DB::select("select id, categoria from categorias order by categoria");
+        $categorias = DB::select("SELECT id, categoria FROM categorias ORDER BY categoria");
         return view('viewHome2017/mexicox')->with('categorias', $categorias);
     }
 
@@ -28,17 +28,17 @@ class MexicoxController extends Controller {
         if ($categoria == '0') {
         $cursosRecientes = DB::select("SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
             a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso
-            FROM course_name b inner join edxapp.course_overviews_courseoverview a on a.id = b.course_id 
-            where b.course_id is not null and trim(b.course_id)!='' and b.activo=1 
-            and a.enrollment_start < '".$fechaHoy."' and a.enrollment_end > '".$fechaHoy."' order by a.start desc;");
+            FROM course_name b INNER JOIN edxapp.course_overviews_courseoverview a ON a.id = b.course_id 
+            WHERE b.course_id is not null AND TRIM(b.course_id)!='' AND b.activo=1 
+            AND a.enrollment_end > '".$fechaHoy."' ORDER BY a.start desc;");
         } else {
             $cursosRecientes = DB::select("
             SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
             a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso
-            FROM curso_categoria c INNER JOIN course_name b on b.id = c.id_curso 
-		    INNER JOIN edxapp.course_overviews_courseoverview a on a.id = b.course_id 
+            FROM curso_categoria c INNER JOIN course_name b ON b.id = c.id_curso 
+		    INNER JOIN edxapp.course_overviews_courseoverview a ON a.id = b.course_id 
             WHERE c.id_categoria = " . $categoria . "
-            AND b.course_id is not null AND trim(b.course_id)!='' AND b.activo=1 ORDER BY a.start DESC;");
+            AND b.course_id is not null AND TRIM(b.course_id)!='' AND b.activo=1 ORDER BY a.start DESC;");
         }
         return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
     }
@@ -50,7 +50,7 @@ class MexicoxController extends Controller {
             $condicionCat = '';
         }
         else{
-            $condicionCat = "and c.id_categoria = " . $categoria;
+            $condicionCat = "AND c.id_categoria = " . $categoria;
         }
         $institucion = $_POST['imparte'];
         $cursosRecientes = DB::select("SELECT a.display_name AS nombreCurso, a.id AS id_curso, a.course_image_url AS thumbnail,
@@ -67,13 +67,13 @@ class MexicoxController extends Controller {
         if ($categoria == '0') {
             $instituciones = DB::select("SELECT distinct(b.nombre_institucion), b. institucion
                                 FROM edxapp.course_overviews_courseoverview a INNER JOIN course_name b ON a.id = b.course_id
-                                WHERE a.id is not null AND trim(a.id)!='' AND b.activo=1 ORDER BY b.institucion");
+                                WHERE a.id is not null AND TRIM(a.id)!='' AND b.activo=1 ORDER BY b.institucion");
         } else {
             $instituciones = DB::select("SELECT DISTINCT(b.nombre_institucion), b. institucion
                             FROM edxapp.course_overviews_courseoverview a INNER JOIN course_name b ON a.id = b.course_id
                             INNER JOIN curso_categoria c ON b.id = c.id_curso
                             WHERE c.id_categoria = " . $categoria . "
-                            AND a.id is not null AND trim(a.id)!='' AND b.activo=1 ORDER BY b.nombre_institucion desc");
+                            AND a.id is not null AND TRIM(a.id)!='' AND b.activo=1 ORDER BY b.nombre_institucion desc");
         }
         return view('viewHome2017/muestraInstituciones')->with('instituciones', $instituciones)->with('categoria',$categoria);
     }
@@ -83,9 +83,9 @@ class MexicoxController extends Controller {
 
         $cursosRecientes = DB::select("SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
             a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso
-            FROM course_name b inner join edxapp.course_overviews_courseoverview a on a.id = b.course_id 
-            where b.course_id is not null and trim(b.course_id)!='' and b.activo=1 
-            and match(a.display_name,a.short_description) against('".$termino."') order by a.start desc;");
+            FROM course_name b INNER JOIN edxapp.course_overviews_courseoverview a ON a.id = b.course_id 
+            WHERE b.course_id is not null AND TRIM(b.course_id)!='' AND b.activo=1 
+            AND MATCH(a.display_name,a.short_description) AGAINST('".$termino."') ORDER BY a.start DESC;");
 		return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
     }
 }
