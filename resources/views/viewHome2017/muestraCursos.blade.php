@@ -27,7 +27,7 @@
                 @endif
             </div>
             @if($fechaHoy < date_create($curso->inicioInscripcion))
-                <div class="ribbon"><span style="background: linear-gradient(#ccccff 0%, #9999ff 100%) !important;">Próximamente</span></div>
+                <div class="ribbon"><span style="background: linear-gradient(#9999ff 0%, #1a1aff 100%) !important;">Próximamente</span></div>
             @elseif($fechaHoy > date_create($curso->finCurso))
                 <div class="ribbon"><span style="background: linear-gradient(#999999 0%, #666666 100%) !important;">Finalizado</span></div>
             @elseif($fechaHoy >= date_create($curso->inicioInscripcion) && $fechaHoy <= date_create($curso->finInscripcion))
