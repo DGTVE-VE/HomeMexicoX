@@ -11,19 +11,20 @@
 |
 */
 //Route::get ('/','Controller@index');
-Route::get ('/','MexicoxController@Home2017');
-
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('MexicoX','MexicoxController@mexicox');
-
+//Route::get('MexicoX','MexicoxController@mexicox');
+Route::get('/login','MexicoxController@login');
+Route::get ('/','MexicoxController@Home2017');
 Route::get('Home2017','MexicoxController@Home2017');
 Route::post('Home2017/filtroCursos/{categoria}','MexicoxController@filtroCursos');
 Route::post('Home2017/obtieneInstituciones/{categoria}','MexicoxController@obtenerInstituciones');
 Route::post('Home2017/cursosInstitucion','MexicoxController@cursosInstitucion');
 Route::post ('Home2017/buscaCurso', 'MexicoxController@buscar');
-Route::auth();
+
+/* se desactiva el login y register de laravel*/
+//Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
