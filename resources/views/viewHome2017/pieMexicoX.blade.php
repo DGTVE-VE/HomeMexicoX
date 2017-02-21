@@ -7,7 +7,11 @@
     </li> 
     <li class="col-md-1 col-sm-3 col-xs-6 col-lg-1"><a href="http://mx.mexicox.gob.mx/faq" style="color: black;"><strong>FAQs</strong></a></li>
     <li class="col-md-1 col-sm-3 col-xs-6 col-lg-1"><a href="http://mx.mexicox.gob.mx/about" style="color: black;"><strong>Nosotros</strong></a></li>
-    <li class="col-md-7 col-lg-7 hidden-sm hidden-xs"></li>
+    <li class="col-md-3 col-sm-3 col-xs-6 col-lg-2">
+        <a href="http://mx.mexicox.gob.mx/blog" style="color: black;"><strong>Aliados Estratégicos</strong></a>
+    </li> 
+
+    <li class="col-md-3 col-lg-5 hidden-sm hidden-xs"></li>
 </ul>  
 <div class="col-md-2 col-sm-4 col-xs-6 col-lg-1">
     <a href="http://www.gob.mx/sep">
@@ -46,7 +50,7 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <br>
     <p class="text-muted col-md-12 col-sm-12" style="font-size: 10px;">© MéxicoX. Todos los derechos reservados, excepto cuando se indique. EdX, Open edX, y los logos de edX y Open edX son marcas registradas de edX Inc.</p>        
-	<a href="http://mx.mexicox.gob.mx/privacy" style="color: red; font-size: 10px;" aria-expanded="false">Política de privacidad </a> <span style="padding-right:10px; padding-left:10px;"> - </span>
+    <a href="http://mx.mexicox.gob.mx/privacy" style="color: red; font-size: 10px;" aria-expanded="false">Política de privacidad </a> <span style="padding-right:10px; padding-left:10px;"> - </span>
     <a href="http://mx.mexicox.gob.mx/honor" style="color: red; font-size: 10px;" aria-expanded="false">Código de Honor</a>
 
 </div>
