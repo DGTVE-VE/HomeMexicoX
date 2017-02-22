@@ -3,11 +3,15 @@
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
+        <img src="{{'img/banner4.jpg'}}"  alt="Four slide" class="imgBanner">
+    </div>      
+    <div class="item">
       <img src="{{'img/banner1.jpg'}}" alt="First slide" class="imgBanner">
-    </div>
+    </div>      
     <div class="item">
       <img src="{{'img/banner2.jpg'}}" alt="Second slide" class="imgBanner">
     </div>
@@ -27,10 +31,10 @@
 <style>
 	.imgBanner{
 		width:100%;
-	}
+      	}
 </style>
 <script>
     $('.carousel').carousel({
-        interval: 5000
+        interval: 3000
     })
 </script>
