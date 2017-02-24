@@ -7,16 +7,16 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-        <img src="{{'img/banner4.jpg'}}"  alt="Four slide" class="imgBanner">
+        <img src="{{'img/bannerFront/comoentenderelpresupuesto.jpg'}}"  alt="" class="imgBanner">
     </div>      
     <div class="item">
-      <img src="{{'img/banner1.jpg'}}" alt="First slide" class="imgBanner">
-    </div>      
-    <div class="item">
-      <img src="{{'img/banner2.jpg'}}" alt="Second slide" class="imgBanner">
+      <img src="{{'img/bannerFront/comosonnuestrasescuelas.jpg'}}" alt="" class="imgBanner">
     </div>
     <div class="item">
-      <img src="{{'img/banner3.jpg'}}" alt="Third slide" class="imgBanner">
+      <img src="{{'img/bannerFront/informaciongeoespacial.jpg'}}" alt="" class="imgBanner">
+    </div>
+    <div class="item">
+      <img src="{{'img/bannerFront/lahistoriadelavidacotidiana.jpg'}}" alt="" class="imgBanner">
     </div>
   </div>
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -26,7 +26,7 @@
   <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
     <span class="icon-next" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
-  </a>
+  </a>    
 </div>
 <style>
 	.imgBanner{
