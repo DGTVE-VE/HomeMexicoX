@@ -7,7 +7,7 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-        <img src="{{'img/bannerFront/comoentenderelpresupuesto.jpg'}}"  alt="" class="imgBanner">
+        <img src="{{'img/bannerFront/comoentenderelpersupuesto.jpg'}}"  alt="" class="imgBanner">
     </div>      
     <div class="item">
       <img src="{{'img/bannerFront/comosonnuestrasescuelas.jpg'}}" alt="" class="imgBanner">
