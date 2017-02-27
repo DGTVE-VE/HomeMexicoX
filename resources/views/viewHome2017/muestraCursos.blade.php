@@ -14,7 +14,7 @@
                     <div class="caption tituloCurso text-uppercase"><br>{{substr($curso->nombreCurso, 0, 60).'...'}}</div>
                 @endif
                 <div class="caption tituloCurso"> Impartido por: 
-                    <span class="text-uppercase" data-toggle="tooltip" data-placement="bottom" title="{{$curso->nombre_institucion}}">{{$curso->institucion}}</span>
+                    <strong><span class="text-uppercase" data-toggle="tooltip" data-placement="bottom" title="{{$curso->nombre_institucion}}">{{$curso->institucion}}</span></strong>
                 </div>
                 @if($fechaHoy < date_create($curso->inicioInscripcion))
                     <div class="caption fechaCurso"> Inicio inscripciones: <br class="visible-xs"/><span class="tituloCurso">{{ substr($curso->inicioInscripcion, 0, 10) }}</span></div>
