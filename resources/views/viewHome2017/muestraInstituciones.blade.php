@@ -11,4 +11,4 @@
         @endforeach
     </div>
 </div>
-<script src="{{asset('js/muestraInstituciones.js')}}"></script>
+<script src="{{asset('js/listaInstituciones.js')}}"></script>

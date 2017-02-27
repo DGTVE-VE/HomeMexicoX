@@ -41,11 +41,20 @@
         </ul>
     </div><!--/.nav-collapse -->
 </nav>
-<script src="{{asset('js/encabezado.js')}}"></script>
+<script src="{{asset('js/encabeza2.js')}}"></script>
 <script>
     $('#termino').keypress(function(e) {
         if(e.which == 13) {
             busquedaCurso("{{$urlBusuqeda}}", "{{csrf_token()}}");
         }
+    });
+    $(document).on('click', 'a.ligaCategoria', function () {
+        var $element = $(this);
+        /*   *****  mostrar cursos recientes   *****   */
+        llenaCursosCategoria("{{url('Home2017/filtroCursos')}}", "{{csrf_token()}}", $element, 0);
+        /*   *****  mostrar cursos archivados   *****   */
+        llenaCursosCategoria("{{url('Home2017/filtroCursos')}}", "{{csrf_token()}}", $element, 1);
+        /*  *****   Llenar lista de instituciones   *****   */
+        llenaInstitucionesCat("{{url('Home2017/obtieneInstituciones')}}", "{{csrf_token()}}", $element);
     });
 </script>

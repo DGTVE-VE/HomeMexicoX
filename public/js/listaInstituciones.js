@@ -20,6 +20,7 @@
                 data: {
                     cat: categoria,
                     imparte: institucion,
+                    archivado: "0",
                     _token: csrfTok
                 },
                 error: function (ts) {
@@ -29,9 +30,29 @@
         })
         .done(function (msg) {
             $("#clasificacion").empty();
-            $("#clasificacion").append('Cursos por institucion');
+            $("#clasificacion").append('Cursos de: ' + institucion);
             $("#contenedorCursos").empty();
             $("#contenedorCursos").append(msg)
+        });
+        $.ajax({
+        method: "POST",
+                url: urlXInstitucion,
+                data: {
+                    cat: categoria,
+                    imparte: institucion,
+                    archivado: "1",
+                    _token: csrfTok
+                },
+                error: function (ts) {
+                console.log(ts.responseText);
+                $("#contenedorCursos").empty();
+                }
+        })
+        .done(function (msg) {
+            $("#clasificacionArchivados").empty();
+            $("#clasificacionArchivados").append('Cursos de: ' + institucion);
+            $("#contenedorCursosArchivados").empty();
+            $("#contenedorCursosArchivados").append(msg)
         });
         $('#myDropdown').removeClass("show");
     }
