@@ -7,13 +7,13 @@
             <div class="col-md-6 col-sm-6 col-lg-5 col-xs-6 imgCurso">
                 <img class="foto pull-left img-responsive" src="http://mx.mexicox.gob.mx{{$curso->thumbnail}}">
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-7 col-xs-6" style="padding-right: 12%;">
+            <div class="col-md-6 col-sm-6 col-lg-7 col-xs-6" style="padding-right: 12%; z-index:2;">
                 @if(strlen($curso->nombreCurso) < 60)
                     <div class="caption tituloCurso text-uppercase"><br>{{$curso->nombreCurso}}</div>
                 @else
                     <div class="caption tituloCurso text-uppercase"><br>{{substr($curso->nombreCurso, 0, 60).'...'}}</div>
                 @endif
-                <div class="caption tituloCurso"> Impartido por: 
+                <div class="caption tituloCurso"> Imparte: 
                     <strong><span class="text-uppercase" data-toggle="tooltip" data-placement="bottom" title="{{$curso->nombre_institucion}}">{{$curso->institucion}}</span></strong>
                 </div>
                 @if($fechaHoy < date_create($curso->inicioInscripcion))
