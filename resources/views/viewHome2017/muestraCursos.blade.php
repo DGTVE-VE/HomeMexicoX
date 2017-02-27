@@ -13,6 +13,9 @@
                 @else
                     <div class="caption tituloCurso text-uppercase"><br>{{substr($curso->nombreCurso, 0, 60).'...'}}</div>
                 @endif
+                <div class="caption tituloCurso text-uppercase">
+                    <span data-toggle="tooltip" data-placement="bottom" title="{{$curso->nombre_institucion}}">{{$curso->institucion}}</span>
+                </div>
                 @if($fechaHoy < date_create($curso->inicioInscripcion))
                     <div class="caption fechaCurso"> Inicio inscripciones: <br class="visible-xs"/><span class="tituloCurso">{{ substr($curso->inicioInscripcion, 0, 10) }}</span></div>
                     <div class="caption fechaCurso"> Fin inscripciones: <br class="visible-xs"/><span class="tituloCurso">{{ substr($curso->finInscripcion, 0, 10) }}</span></div>
@@ -54,3 +57,8 @@
 @if(($i-1)%3!=0 || $i==1)
     <div class="col-md-12" style="padding:10px;"></div>
 @endif
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>

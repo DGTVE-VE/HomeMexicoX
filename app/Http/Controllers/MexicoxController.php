@@ -32,13 +32,15 @@ class MexicoxController extends Controller {
             })->get();*/
         if ($categoria == '0') {
         $cursosRecientes = DB::select("SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
-            a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso
+            a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso,
+            b.institucion, b.nombre_institucion
             FROM course_name b INNER JOIN edxapp.course_overviews_courseoverview a ON a.id = b.course_id 
             WHERE b.course_id is not null AND TRIM(b.course_id)!='' AND b.activo=1 
             AND a.enrollment_end > '".$fechaHoy."' ORDER BY a.start desc;");
         } else {
             $cursosRecientes = DB::select("SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
-            a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso
+            a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso,
+            b.institucion, b.nombre_institucion
             FROM curso_categoria c INNER JOIN course_name b ON b.id = c.id_curso 
 		    INNER JOIN edxapp.course_overviews_courseoverview a ON a.id = b.course_id 
             WHERE c.id_categoria = " . $categoria . "
@@ -58,7 +60,8 @@ class MexicoxController extends Controller {
         }
         $institucion = $_POST['imparte'];
         $cursosRecientes = DB::select("SELECT a.display_name AS nombreCurso, a.id AS id_curso, a.course_image_url AS thumbnail,
-            a.enrollment_end AS finInscripcion, a.enrollment_start AS inicioInscripcion, a.start AS inicioCurso, a.end AS finCurso
+            a.enrollment_end AS finInscripcion, a.enrollment_start AS inicioInscripcion, a.start AS inicioCurso, a.end AS finCurso, 
+            b.institucion, b.nombre_institucion
             FROM edxapp.course_overviews_courseoverview a INNER JOIN course_name b ON a.id = b.course_id
             INNER JOIN curso_categoria c ON b.id = c.id_curso
             WHERE b.institucion = '" . $institucion . "'" . $condicionCat . " AND b.course_id is not null 
@@ -86,7 +89,8 @@ class MexicoxController extends Controller {
         $termino = filter_input(INPUT_POST, 'termino');
 
         $cursosRecientes = DB::select("SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
-            a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso
+            a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, a.end as finCurso,
+            b.institucion, b.nombre_institucion
             FROM course_name b INNER JOIN edxapp.course_overviews_courseoverview a ON a.id = b.course_id 
             WHERE b.course_id is not null AND TRIM(b.course_id)!='' AND b.activo=1 
             AND MATCH(a.display_name,a.short_description) AGAINST('".$termino."') ORDER BY a.start DESC;");
