@@ -32,8 +32,10 @@ class MexicoxController extends Controller {
             })->get();*/
         if($categoria == 0){
             $condicionCat = '';
+            $joinCat = "";
         }
         else{
+            $joinCat = "INNER JOIN curso_categoria c ON b.id = c.id_curso ";
             $condicionCat = "AND c.id_categoria = " . $categoria;
         }
         if($periodo == 0){
@@ -47,7 +49,7 @@ class MexicoxController extends Controller {
             a.end as finCurso, b.institucion, b.nombre_institucion
             FROM edxapp.course_overviews_courseoverview a
 		    INNER JOIN course_name b ON a.id = b.course_id 
-            INNER JOIN curso_categoria c ON b.id = c.id_curso 
+            ".$joinCat."
             WHERE b.course_id is not null AND TRIM(b.course_id)!='' AND b.activo=1 
             ".$condicionCat." AND a.end ".$condicionPeriodo.
             " ORDER BY a.start desc;");
@@ -61,9 +63,11 @@ class MexicoxController extends Controller {
         $institucion = $_POST['imparte'];
         $fechaHoy = date_format(date_create('now'), 'Y-m-d');
         if($categoria == 0){
+            $joinCat = '';
             $condicionCat = '';
         }
         else{
+            $joinCat = "INNER JOIN curso_categoria c ON b.id = c.id_curso";
             $condicionCat = "AND c.id_categoria = " . $categoria;
         }
         if($archivados == 0){
@@ -76,7 +80,7 @@ class MexicoxController extends Controller {
             a.enrollment_end AS finInscripcion, a.enrollment_start AS inicioInscripcion, a.start AS inicioCurso, a.end AS finCurso, 
             b.institucion, b.nombre_institucion
             FROM edxapp.course_overviews_courseoverview a INNER JOIN course_name b ON a.id = b.course_id
-            INNER JOIN curso_categoria c ON b.id = c.id_curso
+            ".$joinCat."
             WHERE b.institucion = '" . $institucion . "'" . $condicionCat . " AND b.course_id is not null
             AND a.end ".$condicionPeriodo."
             AND trim(b.course_id)!='' AND b.activo=1 GROUP BY b.course_id ORDER BY a.start DESC;");
