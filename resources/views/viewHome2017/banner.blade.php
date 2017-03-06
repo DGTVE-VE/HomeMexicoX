@@ -1,7 +1,7 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin-top: 60px;">
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <!--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     <li data-target="#carousel-example-generic" data-slide-to="3"></li>
   </ol>
@@ -9,9 +9,9 @@
     <div class="item active">
         <img src="{{'img/bannerFront/comoentenderelpersupuesto.jpg'}}"  alt="" class="imgBanner">
     </div>      
-    <div class="item">
+<!--    <div class="item">
       <img src="{{'img/bannerFront/comosonnuestrasescuelas.jpg'}}" alt="" class="imgBanner">
-    </div>
+    </div>-->
     <div class="item">
       <img src="{{'img/bannerFront/informaciongeoespacial.jpg'}}" alt="" class="imgBanner">
     </div>
