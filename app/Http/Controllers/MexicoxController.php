@@ -11,12 +11,14 @@ use Carbon\Carbon;
 use App\Model\Course_name;
 use App\Model\Course_overviews_courseoverview;
 use \Illuminate\Support\Facades\Redirect;
+use App\Model\bannerPrincipal;
 
 class MexicoxController extends Controller {
 
     public function Home2017() {
         $categorias = DB::select("SELECT id, categoria FROM categorias ORDER BY categoria");
-        return view('viewHome2017/mexicox')->with('categorias', $categorias);
+        $imgBanner = bannerPrincipal::where('activo',1)->get();
+        return view('viewHome2017/mexicox')->with('categorias', $categorias)->with('imagenBanner', $imgBanner);
     }
 
     public function login() {
