@@ -19,7 +19,7 @@
         @else
             <div class="item">
         @endif
-            <img src="{{url($banner->url_imagen)}}"  alt="" class="imgBanner">
+            <img src="http://reportes.mexicox.gob.mx/imagenes/{{$banner->url_imagen}}"  alt="" class="imgBanner">
         </div>
     @endforeach
     </div>
