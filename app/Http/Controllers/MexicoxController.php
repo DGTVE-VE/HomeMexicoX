@@ -46,7 +46,7 @@ class MexicoxController extends Controller {
         else{
             $condicionPeriodo = " < '" . $fechaHoy . "'";
         }
-        $cursosRecientes = DB::select("SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
+        $cursosRecientes = DB::select("SELECT DISTINCT(a.display_name) as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
             a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso,
             a.end as finCurso, b.institucion, b.nombre_institucion
             FROM edxapp.course_overviews_courseoverview a
@@ -78,7 +78,7 @@ class MexicoxController extends Controller {
         else{
             $condicionPeriodo = " < '" . $fechaHoy . "'";
         }
-        $cursosRecientes = DB::select("SELECT a.display_name AS nombreCurso, a.id AS id_curso, a.course_image_url AS thumbnail,
+        $cursosRecientes = DB::select("SELECT DISTINCT(a.display_name) AS nombreCurso, a.id AS id_curso, a.course_image_url AS thumbnail,
             a.enrollment_end AS finInscripcion, a.enrollment_start AS inicioInscripcion, a.start AS inicioCurso, a.end AS finCurso, 
             b.institucion, b.nombre_institucion
             FROM edxapp.course_overviews_courseoverview a INNER JOIN course_name b ON a.id = b.course_id
@@ -113,7 +113,7 @@ class MexicoxController extends Controller {
         else{
             $condicionPeriodo = " < '" . $fechaHoy . "'";
         }
-        $cursosRecientes = DB::select("SELECT a.display_name as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
+        $cursosRecientes = DB::select("SELECT DISTINCT(a.display_name) as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
             a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, 
             a.end as finCurso, b.institucion, b.nombre_institucion
             FROM course_name b INNER JOIN edxapp.course_overviews_courseoverview a ON a.id = b.course_id 
