@@ -19,7 +19,13 @@
         @else
             <div class="item">
         @endif
-            <img src="http://reportes.mexicox.gob.mx/{{$banner->url_imagen}}"  alt="" class="imgBanner">
+        @if(!empty($banner->ligaHref))
+            <a href="{{$banner->ligaHref}}" target="_blank">
+        @endif
+        <img src="http://reportes.mexicox.gob.mx/{{$banner->url_imagen}}"  alt="" class="imgBanner">
+        @if(!empty($banner->ligaHref))
+            </a>
+        @endif
         </div>
     @endforeach
     </div>
