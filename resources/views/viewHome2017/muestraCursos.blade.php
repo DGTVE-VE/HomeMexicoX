@@ -1,4 +1,4 @@
-{{--*/ $i=1; $fechaHoy = date_create('now');/*--}}
+{{--*/ $i=1; $fechaHoy = date_create('now') /*--}}
 <br>
 @foreach($cursosFiltrados as $curso)
     <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 cuadroCurso">
@@ -31,14 +31,14 @@
             </div>
             @if($fechaHoy < date_create($curso->inicioInscripcion))
                 <div class="ribbon"><span style="background: linear-gradient(#9999ff 0%, #1a1aff 100%) !important;">Próximamente</span></div>
-            @elseif($fechaHoy > date_create($curso->finCurso))
-                <div class="ribbon"><span style="background: linear-gradient(#999999 0%, #666666 100%) !important;">Finalizado</span></div>
+            @elseif($fechaHoy >= date_create($curso->inicioCurso) && $fechaHoy <= date_create($curso->finCurso))
+                <div class="ribbon"><span style="background: linear-gradient(#3bbf2a 0%, #5fbf3d 100%) !important;">En curso</span></div>
             @elseif($fechaHoy >= date_create($curso->inicioInscripcion) && $fechaHoy <= date_create($curso->finInscripcion))
                 <div class="ribbon"><span>Inscripciones</span></div>
             @elseif($fechaHoy >= date_create($curso->finInscripcion) && $fechaHoy <= date_create($curso->inicioCurso))
                 <div class="ribbon"><span style="background: linear-gradient(#ebb943 0%, #D03B30 100%) !important;">Por Iniciar</span></div>
-            @elseif($fechaHoy >= date_create($curso->inicioCurso) && $fechaHoy <= date_create($curso->finCurso))
-                <div class="ribbon"><span style="background: linear-gradient(#3bbf2a 0%, #5fbf3d 100%) !important;">En curso</span></div>
+            @elseif($fechaHoy > date_create($curso->finCurso))
+                <div class="ribbon"><span style="background: linear-gradient(#999999 0%, #666666 100%) !important;">Finalizado</span></div>
             @endif
         </div>
     </div>

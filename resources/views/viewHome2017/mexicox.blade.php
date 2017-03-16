@@ -52,11 +52,11 @@ mx.mexicox.gob.mx/register</h6>
 <script src="{{asset('js/mexicoxInicio.js')}}"></script>
 <script>
 /*   *****  mostrar cursos recientes   *****   */
-llenaCursos("{{url('Home2017/filtroCursos/0/0')}}", "{{csrf_token()}}", 0);
+llenaCursos("{{url('Home2017/filtrarCurso/0/0')}}", "{{csrf_token()}}", 0);
 /*   *****  mostrar cursos archivados   *****   */
-llenaCursos("{{url('Home2017/filtroCursos/0/1')}}", "{{csrf_token()}}", 1);
+llenaCursos("{{url('Home2017/filtrarCurso/0/1')}}", "{{csrf_token()}}", 1);
 /*  *****   Llenar lista de instituciones   *****   */
-llenaInstituciones("{{url('Home2017/obtieneInstituciones/0')}}", "{{csrf_token()}}");
+llenaInstituciones("{{url('Home2017/obtenerInstitucion/0')}}", "{{csrf_token()}}");
 </script>
 <!--<script>
    $(document).ready(function()

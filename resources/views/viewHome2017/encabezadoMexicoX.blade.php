@@ -51,10 +51,10 @@
     $(document).on('click', 'a.ligaCategoria', function () {
         var $element = $(this);
         /*   *****  mostrar cursos recientes   *****   */
-        llenaCursosCategoria("{{url('Home2017/filtroCursos')}}", "{{csrf_token()}}", $element, 0);
+        llenaCursosCategoria("{{url('Home2017/filtrarCurso')}}", "{{csrf_token()}}", $element, 0);
         /*   *****  mostrar cursos archivados   *****   */
-        llenaCursosCategoria("{{url('Home2017/filtroCursos')}}", "{{csrf_token()}}", $element, 1);
+        llenaCursosCategoria("{{url('Home2017/filtrarCurso')}}", "{{csrf_token()}}", $element, 1);
         /*  *****   Llenar lista de instituciones   *****   */
-        llenaInstitucionesCat("{{url('Home2017/obtieneInstituciones')}}", "{{csrf_token()}}", $element);
+        llenaInstitucionesCat("{{url('Home2017/obtenerInstitucion')}}", "{{csrf_token()}}", $element);
     });
 </script>
