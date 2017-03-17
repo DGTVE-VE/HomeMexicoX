@@ -24,13 +24,13 @@
                     @endforeach
                 </ul>
             </li>
-            <li><input type="button" class="btnmorado" value="Registrate" onclick="window.location.href = 'http://mx.mexicox.gob.mx/register?next=%2Fdashboard'"></li>
+            <li><input type="button" class="btnmorado" value="Regístrate" onclick="window.location.href = 'http://mx.mexicox.gob.mx/register?next=%2Fdashboard'"></li>
 
             <li><input type="button" class="btnverde" value="Iniciar Sesión" onclick="window.location.href = 'http://mx.mexicox.gob.mx/login'"></li>            
             <li class="buscar">
                 <div class="navbar-form">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Busqueda por curso" id="termino">
+                        <input type="text" class="form-control" placeholder="Búsqueda por curso" id="termino">
                          {{ csrf_field() }}
                         <div class="input-group-btn">
                             <button class="btn btn-default" onclick="busquedaCurso('{{$urlBusuqeda}}', '{{csrf_token()}}')"><i class="glyphicon glyphicon-search"></i></button>
