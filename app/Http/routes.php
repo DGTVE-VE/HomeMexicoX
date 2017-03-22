@@ -21,7 +21,12 @@ Route::get('Home2017','MexicoxController@Home2017');
 Route::post('Home2017/filtrarCurso/{categoria}/{archivado}','MexicoxController@filtroCursos');
 Route::post('Home2017/obtenerInstitucion/{categoria}','MexicoxController@obtenerInstituciones');
 Route::post('Home2017/cursosInstitucion','MexicoxController@cursosInstitucion');
-Route::post ('Home2017/buscaCurso', 'MexicoxController@buscar');
+Route::post('Home2017/buscaCurso', 'MexicoxController@buscar');
+
+Route::get('blog', 'MexicoxController@blog');
+Route::any('viewblog', 'MexicoxController@viewblog');
+Route::any('getblog', 'MexicoxController@getblog');
+Route::any('saveblog', ['middleware' => 'auth', 'uses' => 'MexicoxController@saveblog']);
 
 /* se desactiva el login y register de laravel*/
 //Route::auth();

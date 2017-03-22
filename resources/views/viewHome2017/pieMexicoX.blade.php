@@ -9,8 +9,10 @@
     <li class="col-md-1 col-sm-3 col-xs-6 col-lg-1"><a href="http://mx.mexicox.gob.mx/about" style="color: black;"><strong>Nosotros</strong></a></li>
     <li class="col-md-3 col-sm-3 col-xs-6 col-lg-2">
         <a href="http://mx.mexicox.gob.mx/blog" style="color: black;"><strong>Aliados Estratégicos</strong></a>
-    </li> 
-
+    </li>
+    <li class="col-md-3 col-sm-3 col-xs-6 col-lg-2">
+        <a href="{{asset('blog')}}" style="color: black;"><strong>Blog</strong></a>
+    </li>
     <li class="col-md-3 col-lg-5 hidden-sm hidden-xs"></li>
 </ul>  
 <div class="col-md-2 col-sm-4 col-xs-6 col-lg-1">

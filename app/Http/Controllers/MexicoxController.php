@@ -12,6 +12,7 @@ use App\Model\Course_name;
 use App\Model\Course_overviews_courseoverview;
 use \Illuminate\Support\Facades\Redirect;
 use App\Model\bannerPrincipal;
+use App\Model\Blog;
 
 class MexicoxController extends Controller {
 
@@ -121,5 +122,23 @@ class MexicoxController extends Controller {
             AND a.end ".$condicionPeriodo."
             AND MATCH(a.display_name,a.short_description) AGAINST('".$termino."') ORDER BY a.start DESC;");
 		return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
+    }
+    
+    public function blog(){
+        $entradas = Blog::where('publico', 1)->orderBy('id', 'desc')->get();
+        $usuario = session()->get('nombre');
+        return view('viewHome2017/blog/blog')->with('entradas', collect($entradas));
+    }
+    
+    public function viewblog($idEntrada){
+        $entradas = Blog::where('publico', '0')->get();
+        $entrada = Blog::whereid($idEntrada)->get();
+        $usuario = session()->get('nombre');
+        return view('viewHome2017/blog/viewblog')->with('entradas', collect($entradas))->with('entrada', collect($entrada))->with('name_user',$usuario);
+    }
+    
+    public function getblog(Request $request){
+        $inputid = $request->input('id');
+        return $this->viewblog($inputid);
     }
 }
