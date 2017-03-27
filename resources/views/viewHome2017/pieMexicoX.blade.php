@@ -8,7 +8,7 @@
     <li class="col-md-1 col-sm-3 col-xs-6 col-lg-1"><a href="http://mx.mexicox.gob.mx/faq" style="color: black;"><strong>FAQs</strong></a></li>
     <li class="col-md-1 col-sm-3 col-xs-6 col-lg-1"><a href="http://mx.mexicox.gob.mx/about" style="color: black;"><strong>Nosotros</strong></a></li>
     <li class="col-md-3 col-sm-3 col-xs-6 col-lg-2">
-        <a href="http://mx.mexicox.gob.mx/blog" style="color: black;"><strong>Aliados Estratégicos</strong></a>
+        <a href="{{asset('aliados')}}" style="color: black;"><strong>Aliados Estratégicos</strong></a>
     </li>
     <li class="col-md-3 col-sm-3 col-xs-6 col-lg-2">
         <a href="{{asset('blog')}}" style="color: black;"><strong>Blog</strong></a>
