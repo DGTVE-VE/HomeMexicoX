@@ -141,4 +141,8 @@ class MexicoxController extends Controller {
         $inputid = $request->input('id');
         return $this->viewblog($inputid);
     }
+     public function aliados() {
+         $categorias = DB::select("SELECT id, categoria FROM categorias ORDER BY categoria");
+        return view('viewHome2017.aliados')->with('categorias', $categorias);
+    }
 }

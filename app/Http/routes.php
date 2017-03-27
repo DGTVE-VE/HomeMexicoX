@@ -27,6 +27,7 @@ Route::get('blog', 'MexicoxController@blog');
 Route::any('viewblog', 'MexicoxController@viewblog');
 Route::any('getblog', 'MexicoxController@getblog');
 Route::any('saveblog', ['middleware' => 'auth', 'uses' => 'MexicoxController@saveblog']);
+Route::get('/aliados','MexicoxController@aliados');
 
 /* se desactiva el login y register de laravel*/
 //Route::auth();
