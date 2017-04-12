@@ -6,7 +6,7 @@ MéxicoX
 @include('viewHome2017.encabezadoMexicoX')
 @endsection
 @section('cuerpoMexicoX')
-<div class="modal fade" id="modalInf" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+<!--<div class="modal fade" id="modalInf" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header text-info" style="background-image: url('img/encabezado.jpg')">
@@ -24,10 +24,11 @@ MéxicoX
             </div>
         </div>
     </div>
-</div>
+</div>-->
+
 @include('viewHome2017.banner')
 <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >        
         <h3 class="">CURSOS</h3>
     </div>      
     <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
@@ -35,6 +36,15 @@ MéxicoX
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6" id="selectInstitucion" style="padding-top:10px; padding-bottom:5px;"></div>
 </div>
+    <div class="col-md-12">
+        <article>
+            <button type="button" class="close" style="color: red;">&times</button><br>
+            <h5 class="text-justify">Si deseas realizar tu servicio social o prácticas profesionales de forma presencial, MéxicoX es el lugar para ti.
+                Necesitamos personas proactivas, con entusiasmo y ganas de formar parte de un gran equipo.
+            </h5>
+            <h5 class="text-center">Para mayores Informes puedes consultar <a class="linkcolor" href="http://mx.mexicox.gob.mx/donate">  Informes Servicio Social</a></h5>
+        </article>
+    </div>
 <div id="contenedorCursos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 
 <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -59,7 +69,11 @@ llenaInstituciones("{{url('Home2017/obtenerInstitucion/0')}}", "{{csrf_token()}}
 <script>
     $(document).ready(function ()
     {
-        $("#modalInf").modal("show");
+//        $("#modalInf").modal("show");
+        $("article").slideToggle("slow");
+    });
+    $('.close').click(function () {
+        $("article").slideToggle("slow");
     });
 </script>
 @endsection

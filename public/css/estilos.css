@@ -237,3 +237,21 @@ body {
 /*FIn Pleca de cuadro de curso (status)*/
 
 
+/*modal servicio social*/
+article {
+    background-color: rgba(66,66, 66, 0.8);    
+    padding:10px;       
+    color:white;
+    text-align:center;
+    position:absolute;
+    bottom:0;
+    display:none;
+    z-index:1000;
+    width: 30%;
+    margin-left: 65%;
+}
+.linkcolor{color: white; font-weight: bold; text-decoration: underline;}
+.linkcolor:hover{
+    color: white;
+    font-weight: bold;
+}
