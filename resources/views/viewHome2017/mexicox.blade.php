@@ -36,7 +36,7 @@ MéxicoX
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6" id="selectInstitucion" style="padding-top:10px; padding-bottom:5px;"></div>
 </div>
-    <div class="col-md-12">
+<!--    <div class="col-md-12">
         <article>
             <button type="button" class="close" style="color: red;">&times</button><br>
             <h5 class="text-justify">Si deseas realizar tu servicio social o prácticas profesionales de forma presencial, MéxicoX es el lugar para ti.
@@ -44,7 +44,7 @@ MéxicoX
             </h5>
             <h5 class="text-center">Para mayores Informes puedes consultar <a class="linkcolor" href="http://mx.mexicox.gob.mx/donate">  Informes Servicio Social</a></h5>
         </article>
-    </div>
+    </div>-->
 <div id="contenedorCursos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 
 <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
