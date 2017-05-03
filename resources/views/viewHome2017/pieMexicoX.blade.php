@@ -1,3 +1,11 @@
+<style>
+    .alturaImg{
+        height: 40px;
+    }
+    .imgMexDig{
+        height: 35px;
+    }
+</style>
 <ul class="nav navbar-nav navbar-left col-md-12 col-sm-12 col-xs-12 col-lg-12" style="border-top: solid 2px black;"> 
     <li class="col-md-1 col-sm-3 col-xs-6 col-lg-1">
         <a href="http://mx.mexicox.gob.mx/contact" style="color: black;"><strong>Contacto</strong></a>
@@ -17,36 +25,43 @@
 </ul>  
 <div class="col-md-2 col-sm-4 col-xs-6 col-lg-1">
     <a href="http://www.gob.mx/sep">
-        <img src="img/sep.png" alt="Secretaría de Educación Pública" width="100">
+        <img src="img/sep.png" alt="Secretaría de Educación Pública" class="alturaImg">
     </a>
 </div>
-<div class="col-md-2 col-sm-4 col-xs-6 col-lg-1">
-    <a href="https://www.gob.mx/mexicodigital/">
-        <img src="img/mexico_digital.png" alt="México Digital" width="100">
-    </a>
+<div class="col-md-2 col-sm-4 col-xs-6 col-lg-2">
+    <center>
+        <a href="https://www.gob.mx/mexicodigital/">
+            <img src="img/mexico_digital.png" alt="México Digital" class="imgMexDig">
+        </a>
+    </center>
 </div>
 <div class="visible-xs col-xs-12" style="padding:10px;"></div>
 <div class="col-md-2 col-sm-4 col-xs-6 col-lg-1">
     <a href="http://www.televisioneducativa.gob.mx/">
-        <img src="img/dgtve.png" alt="Televisión Educativa" width="100">
+        <img src="img/dgtve.png" alt="Televisión Educativa" class="alturaImg">
     </a>
 </div>
 <div class="visible-sm col-sm-12" style="padding:10px;"></div>
 <div class="col-md-2 col-sm-4 col-xs-6 col-lg-1">
     <a href="http://mexicox.gob.mx/">
-        <img src="img/mexicox.png" alt="MéxicoX" width="100">
+        <img src="img/mexicox.png" alt="MéxicoX" class="alturaImg">
     </a>
 </div>
+<div class="col-md-2 col-sm-4 col-xs-6 col-lg-2">
+    
+</div>
 <div class="visible-xs col-xs-12" style="padding:10px;"></div>
-<div class="hidden-md  hidden-sm hidden-xs col-lg-6"></div>
-<div class="col-md-2  col-sm-4 col-xs-6 col-lg-1">
-    <a href="http://open.edx.org">
-        <img src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag.png" alt="Con la tecnología de Open edX" width="100">
-    </a>
+<div class="hidden-md  hidden-sm hidden-xs col-lg-2"></div>
+<div class="col-md-2  col-sm-4 col-xs-6 col-lg-2">
+    <center>
+        <a href="http://open.edx.org">
+            <img src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag.png" alt="Con la tecnología de Open edX" class="alturaImg">
+        </a>
+    </center>
 </div>
 <div class="col-md-1 col-sm-4 col-xs-6 col-lg-1">
     <a href="http://groups.itu.int/stocktaking/WSISPrizes/WSISPrizes2016.aspx#home">
-        <img src="img/logo-swis.png" alt="Premio WSIS" width="100">
+        <img src="img/logo-swis.png" alt="Premio WSIS" class="alturaImg">
     </a>
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
