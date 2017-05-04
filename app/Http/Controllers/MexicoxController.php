@@ -41,11 +41,11 @@ class MexicoxController extends Controller {
             $joinCat = "INNER JOIN curso_categoria c ON b.id = c.id_curso ";
             $condicionCat = "AND c.id_categoria = " . $categoria;
         }
-        if($periodo == 0){
-            $condicionPeriodo = " > '" . $fechaHoy . "'";
+        if($periodo == 1){
+            $condicionPeriodo = " <= '" . $fechaHoy . "'";
         }
         else{
-            $condicionPeriodo = " <= '" . $fechaHoy . "'";
+            $condicionPeriodo = " > '" . $fechaHoy . "'";
         }
         $cursosRecientes = DB::select("SELECT DISTINCT(a.display_name) as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
             a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso,
@@ -73,11 +73,11 @@ class MexicoxController extends Controller {
             $joinCat = "INNER JOIN curso_categoria c ON b.id = c.id_curso";
             $condicionCat = "AND c.id_categoria = " . $categoria;
         }
-        if($archivados == 0){
-            $condicionPeriodo = " > '" . $fechaHoy . "'";
+        if($archivados == 1){
+            $condicionPeriodo = " <= '" . $fechaHoy . "'";
         }
         else{
-            $condicionPeriodo = " <= '" . $fechaHoy . "'";
+            $condicionPeriodo = " > '" . $fechaHoy . "'";
         }
         $cursosRecientes = DB::select("SELECT DISTINCT(a.display_name) AS nombreCurso, a.id AS id_curso, a.course_image_url AS thumbnail,
             a.enrollment_end AS finInscripcion, a.enrollment_start AS inicioInscripcion, a.start AS inicioCurso, a.end AS finCurso, 
@@ -108,11 +108,11 @@ class MexicoxController extends Controller {
         $archivados = filter_input(INPUT_POST, 'archivado');
         $termino = filter_input(INPUT_POST, 'termino');
         $fechaHoy = date_format(date_create('now'), 'Y-m-d');
-        if($archivados == 0){
-            $condicionPeriodo = " > '" . $fechaHoy . "'";
+        if($archivados == 1){
+            $condicionPeriodo = " <= '" . $fechaHoy . "'";
         }
         else{
-            $condicionPeriodo = " <= '" . $fechaHoy . "'";
+            $condicionPeriodo = " > '" . $fechaHoy . "'";
         }
         $cursosRecientes = DB::select("SELECT DISTINCT(a.display_name) as nombreCurso, a.id as id_curso, a.course_image_url as thumbnail,
             a.enrollment_end as finInscripcion, a.enrollment_start as inicioInscripcion, a.start as inicioCurso, 
