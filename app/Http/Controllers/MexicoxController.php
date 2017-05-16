@@ -18,7 +18,7 @@ class MexicoxController extends Controller {
 
     public function Home2017() {
         $categorias = DB::select("SELECT id, categoria FROM categorias ORDER BY categoria");
-        $imgBanner = bannerPrincipal::where('activo',1)->get();
+        $imgBanner = bannerPrincipal::where('activo',1)->orderBy('created_at', 'desc')->get();
         return view('viewHome2017/mexicox')->with('categorias', $categorias)->with('imagenBanner', $imgBanner);
     }
 
