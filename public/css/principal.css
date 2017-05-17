@@ -178,7 +178,7 @@ body {
 
 .panel-default>.panel-heading {
     color: #333;
-    /*background-color: #F2A49B;*/
+    background-color: #F2A49B;
     border-color: #ddd;
 }
 
@@ -300,3 +300,5 @@ a:link{text-decoration:none;   }
 .padding-0 {
     padding: 0;
 }
+
+
