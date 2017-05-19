@@ -44,9 +44,86 @@ MéxicoX
             <h5 class="text-center">Para mayores Informes puedes consultar <a class="linkcolor" href="http://mx.mexicox.gob.mx/donate">  Informes Servicio Social</a></h5>
         </article>
     </div>-->
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-    <div id="contenedorCursos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div id="contenedorCursos" class="col-lg-8 col-md-8 col-sm-8 col-xs-8"> </div>
 
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+        <br>
+        <div class="panel panel-default"><!--Tutoriales-->
+            <div class="panel-heading">
+                <h3 class="panel-title">Tutoriales</h3>
+            </div>   
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
+                        <div class="col-xs-10">
+                            Tutorial 1
+                        </div>
+                        <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                    </div>
+                    <div id="detail-1">
+                        <hr></hr>
+                        <div class="container">
+                            <div class="fluid-row">
+                                <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+                        <div class="col-xs-10">
+                            Tutorial 2
+                        </div>
+                        <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                    </div>
+                    <div id="detail-2">
+                        <hr></hr>
+                        <div class="container">
+                            <div class="fluid-row">
+                                <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
+                        <div class="col-xs-10">
+                            Tutorial 3
+                        </div>
+                        <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                    </div>
+                    <div id="detail-3">
+                        <hr></hr>
+                        <div class="container">
+                            <div class="fluid-row">
+                                <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div><!--Video Promocional-->
+            <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="360" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><!--Compartir-->
+            <br><br><br>
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+            <div id="fb-root"></div>
+            <script>(function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id))
+                        return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+        </div>
+    </div>
+    
     <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >
             <h3 class="">Archivados </h3>
@@ -58,82 +135,7 @@ MéxicoX
     </div>
     <div id="contenedorCursosArchivados" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 </div>
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-    <br>
-    <div class="panel panel-default"><!--Tutoriales-->
-        <div class="panel-heading">
-            <h3 class="panel-title">Tutoriales</h3>
-        </div>   
-        <ul class="list-group">
-            <li class="list-group-item">
-                <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
-                    <div class="col-xs-10">
-                        Tutorial 1
-                    </div>
-                    <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
-                </div>
-                <div id="detail-1">
-                    <hr></hr>
-                    <div class="container">
-                        <div class="fluid-row">
-                            <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="list-group-item">
-                <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
-                    <div class="col-xs-10">
-                        Tutorial 2
-                    </div>
-                    <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
-                </div>
-                <div id="detail-2">
-                    <hr></hr>
-                    <div class="container">
-                        <div class="fluid-row">
-                            <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="list-group-item">
-                <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
-                    <div class="col-xs-10">
-                        Tutorial 3
-                    </div>
-                    <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
-                </div>
-                <div id="detail-3">
-                    <hr></hr>
-                    <div class="container">
-                        <div class="fluid-row">
-                            <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <br>
-    <div><!--Video Promocional-->
-        <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="360" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><!--Compartir-->
-        <br><br><br>
-            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
-        <div id="fb-root"></div>
-        <script>(function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id))
-                    return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-    </div>
-</div>
+
 <script src="{{asset('js/mexicoxInicio.js')}}"></script>
 <script>
             /*   *****  mostrar cursos recientes   *****   */

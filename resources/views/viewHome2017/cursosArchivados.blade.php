@@ -1,7 +1,7 @@
 {{--*/ $i=1; $fechaHoy = date_create('now') /*--}}
 <br>
 @foreach($cursosFiltrados as $curso)
-    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 cuadroCurso">
+    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 cuadroCurso">
         <div class="col-md-11 col-md-offset-1 cuadro box">
             <div class="btnCurso" style="position: absolute; right:15px; bottom: 15px; z-index:4;"><a href="http://mx.mexicox.gob.mx/courses/{{$curso->id_curso}}/about"><img style="width:7%;" class="pull-right" src="{{asset('img/botonIrCurso.png')}}" ></a></div>
             <div class="col-md-6 col-sm-6 col-lg-5 col-xs-6 imgCurso">
@@ -46,7 +46,7 @@
     @if($i%2==0)
         <div class="col-sm-12 visible-sm" style="padding:10px;"></div>
     @endif
-    @if($i%2==0)
+    @if($i%3==0)
         <div class="col-lg-12 col-md-12" style="padding:10px;"></div>
     @endif
     {{--*/ $i++; /*--}}
