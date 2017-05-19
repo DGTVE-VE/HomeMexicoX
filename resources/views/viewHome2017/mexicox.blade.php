@@ -26,6 +26,7 @@ MéxicoX
 </div>-->
 
 @include('viewHome2017.banner')
+  
 <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >        
         <h3 class="">CURSOS</h3>
@@ -109,11 +110,13 @@ MéxicoX
         <div class="fb-video" data-href="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/" data-width="420" data-show-text="false"><blockquote cite="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/">
             ¿Quiénes somos?</a><p>¿Conoces todos nuestros servicios educativos? Somos la #SeñalDeConocimiento http://www.televisioneducativa.gob.mx/</p>
             Posted by <a href="https://www.facebook.com/TvEducativaMx/">Televisión Educativa Mx</a> el viernes, 19 de mayo de 2017</blockquote></div>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><!--Compartir-->
-            <div class="col-lg 12 col-md-12 col-sm-12 col-xs-12" style="padding:40px;"></div>
-                <div class="fb-like" data-href="https://www.facebook.com/TvEducativaMx/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-            <div id="fb-root"></div>
-        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:40px;"></div>
+            <!--FB. Me gusta-->
+            <div class="fb-like" data-href="https://www.facebook.com/TvEducativaMx/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+            <!--FB. Compartir-->
+            <!--div class="fb-share-button" data-href="http://mexicox.gob.mx/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmexicox.gob.mx%2F&amp;src=sdkpreparse">Compartir</a></div-->
+            <div class="fb-share-button" data-href="http://mexicox.gob.mx/" data-layout="button_count">
+  </div>
     </div>
     
     <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -127,6 +130,7 @@ MéxicoX
     </div>
     <div id="contenedorCursosArchivados" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 </div>
+<div id="fb-root"></div>
 <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];

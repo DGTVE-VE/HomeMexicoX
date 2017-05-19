@@ -9,7 +9,11 @@ and open the template in the editor.
         <title>@yield('titleMexicoX','MéxicoX')</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <meta property="og:url"           content="http://mexicox.gob.mx/" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="MéxicoX" />
+        <meta property="og:description"   content="Mooc's gratuitos" />
+        <meta property="og:image"         content="http://mx.mexicox.gob.mx/asset-v1:INEE+INEEAPP03x+2017_S1+type@asset+block@imagenInicioPISA.png" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <!--Javascript-->
 
