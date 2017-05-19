@@ -48,8 +48,9 @@ MéxicoX
     <div id="contenedorCursos" class="col-lg-8 col-md-8 col-sm-12 col-xs-12"> </div>
 
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-        <br>
-        <div class="panel panel-default"><!--Tutoriales-->
+        <div class="col-lg 12 col-md-12 col-sm-12 col-xs-12" style="padding:30px;"></div>
+        <!--Tutoriales-->
+        <!--div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Tutoriales</h3>
             </div>   
@@ -103,13 +104,13 @@ MéxicoX
                     </div>
                 </li>
             </ul>
-        </div>
-        <br>
-        <div><!--Video Promocional-->
-            <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="360" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-        </div>
+        </div-->
+        <!--Video Promocional-->
+        <div class="fb-video" data-href="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/" data-width="420" data-show-text="false"><blockquote cite="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/">
+            ¿Quiénes somos?</a><p>¿Conoces todos nuestros servicios educativos? Somos la #SeñalDeConocimiento http://www.televisioneducativa.gob.mx/</p>
+            Posted by <a href="https://www.facebook.com/TvEducativaMx/">Televisión Educativa Mx</a> el viernes, 19 de mayo de 2017</blockquote></div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><!--Compartir-->
-            <br><br><br>
+            <div class="col-lg 12 col-md-12 col-sm-12 col-xs-12" style="padding:40px;"></div>
                 <div class="fb-like" data-href="https://www.facebook.com/TvEducativaMx/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
             <div id="fb-root"></div>
         </div>
