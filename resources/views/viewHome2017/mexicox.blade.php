@@ -45,9 +45,9 @@ MéxicoX
         </article>
     </div>-->
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <div id="contenedorCursos" class="col-lg-8 col-md-8 col-sm-8 col-xs-8"> </div>
+    <div id="contenedorCursos" class="col-lg-8 col-md-8 col-sm-12 col-xs-12"> </div>
 
-    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
         <br>
         <div class="panel panel-default"><!--Tutoriales-->
             <div class="panel-heading">
@@ -110,17 +110,8 @@ MéxicoX
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"><!--Compartir-->
             <br><br><br>
-                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+                <div class="fb-like" data-href="https://www.facebook.com/TvEducativaMx/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
             <div id="fb-root"></div>
-            <script>(function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id))
-                        return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
         </div>
     </div>
     
@@ -135,7 +126,15 @@ MéxicoX
     </div>
     <div id="contenedorCursosArchivados" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 </div>
-
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 <script src="{{asset('js/mexicoxInicio.js')}}"></script>
 <script>
             /*   *****  mostrar cursos recientes   *****   */

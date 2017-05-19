@@ -1,3 +1,4 @@
+<div id="fb-root"></div>
 <ul class="nav navbar-nav navbar-left col-md-12 col-sm-12 col-xs-12 col-lg-12 lineaSeparacion"> 
     <li class="col-md-1 col-sm-3 col-xs-6 col-lg-1">
         <a href="http://mx.mexicox.gob.mx/contact" class="textoLigas"><strong>Contacto</strong></a>
@@ -10,10 +11,11 @@
     <li class="col-md-3 col-sm-3 col-xs-6 col-lg-2">
         <a href="{{asset('aliados')}}" class="textoLigas"><strong>Aliados Estratégicos</strong></a>
     </li>
-    <li class="col-md-3 col-sm-3 col-xs-6 col-lg-2">
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
         <a href="{{asset('blog')}}" class="textoLigas"><strong>Blog</strong></a>
     </li>
-    <li class="col-md-3 col-lg-5 hidden-sm hidden-xs"></li>
+    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-6 margenRedesSoc">
+    </li>
 </ul>  
 <div class="col-md-2 col-sm-4 col-xs-6 col-lg-1">
     <a href="http://www.gob.mx/sep">
@@ -84,5 +86,11 @@
     }
     .lineaSeparacion{
         border-top: solid 2px black;
+    }
+    .margenRedesSoc{
+        padding-top:15px;
+       @media(max-width:500px){
+           padding-bottom:15px;
+       }
     }
 </style>
