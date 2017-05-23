@@ -9,6 +9,7 @@ and open the template in the editor.
         <title>@yield('titleMexicoX','MéxicoX')</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="fb:app_id"           content="421854811517492"/>
         <meta property="og:url"           content="http://mexicox.gob.mx/"/>
         <meta property="og:type"          content="website" />
         <meta property="og:title"         content="MéxicoX" />

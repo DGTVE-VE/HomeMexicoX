@@ -115,8 +115,7 @@ MéxicoX
             <div class="fb-like" data-href="https://www.facebook.com/TvEducativaMx/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
             <!--FB. Compartir-->
             <!--div class="fb-share-button" data-href="http://mexicox.gob.mx/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmexicox.gob.mx%2F&amp;src=sdkpreparse">Compartir</a></div-->
-            <div class="fb-share-button" data-href="http://mexicox.gob.mx/" data-layout="button_count">
-  </div>
+            <div class="fb-share-button" data-href="http://mexicox.gob.mx/" data-layout="button_count"></div>
     </div>
     
     <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
