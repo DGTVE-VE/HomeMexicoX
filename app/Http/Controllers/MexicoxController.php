@@ -133,11 +133,11 @@ class MexicoxController extends Controller {
     public function blog(){
         $entradas = Blog::where('publico', 1)->orderBy('id', 'desc')->get();
         $usuario = session()->get('nombre');
-        return view('viewHome2017/blog/blog')->with('entradas', collect($entradas));
+        return view('viewHome2017/blog/blog')->with('entradas', collect($entradas))->with('publico',1);
     }
     
     public function viewblog($idEntrada){
-        $entradas = Blog::where('publico', '0')->get();
+        $entradas = Blog::where('publico', 1)->get();
         $entrada = Blog::whereid($idEntrada)->get();
         $usuario = session()->get('nombre');
         return view('viewHome2017/blog/viewblog')->with('entradas', collect($entradas))->with('entrada', collect($entrada))->with('name_user',$usuario);
