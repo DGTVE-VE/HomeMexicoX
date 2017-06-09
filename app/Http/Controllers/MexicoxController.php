@@ -56,12 +56,13 @@ class MexicoxController extends Controller {
             WHERE b.course_id is not null AND TRIM(b.course_id)!='' AND b.activo=1 
             ".$condicionCat." AND a.end ".$condicionPeriodo.
             " ORDER BY a.start desc;");
-        if($periodo == 1){
+        return view('viewHome2017/cursosArchivados')->with('cursosFiltrados', $cursosRecientes);
+        /*if($periodo == 1){
             return view('viewHome2017/cursosArchivados')->with('cursosFiltrados', $cursosRecientes);
         }
         else{
             return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
-        }
+        }*/
         
     }
 
