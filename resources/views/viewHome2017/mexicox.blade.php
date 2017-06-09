@@ -111,11 +111,8 @@ MéxicoX
             ¿Quiénes somos?</a><p>¿Conoces todos nuestros servicios educativos? Somos la #SeñalDeConocimiento http://www.televisioneducativa.gob.mx/</p>
             Posted by <a href="https://www.facebook.com/TvEducativaMx/">Televisión Educativa Mx</a> el viernes, 19 de mayo de 2017</blockquote></div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:40px;"></div>
-            <!--FB. Me gusta-->
-            <!--div class="fb-like" data-href="https://www.facebook.com/TvEducativaMx/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
-            <!--FB. Compartir-->
-            <!--div class="fb-share-button" data-href="http://mexicox.gob.mx/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmexicox.gob.mx%2F&amp;src=sdkpreparse">Compartir</a></div-->
-            <!--div class="fb-share-button" data-href="http://mexicox.gob.mx/" data-layout="button_count"></div>
+        <!--FB. Compartir-->
+        <!--div class="fb-share-button" data-href="http://mexicox.gob.mx/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmexicox.gob.mx%2F&amp;src=sdkpreparse">Compartir</a></div>
     </div-->
     
     <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -129,16 +126,6 @@ MéxicoX
     </div>
     <div id="contenedorCursosArchivados" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 </div>
-<div id="fb-root"></div>
-<script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.9";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
 <script src="{{asset('js/mexicoxInicio.js')}}"></script>
 <script>
             /*   *****  mostrar cursos recientes   *****   */
