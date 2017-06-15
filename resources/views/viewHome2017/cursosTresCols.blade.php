@@ -1,11 +1,16 @@
-{{--*/ $i=1; $fechaHoy = date_create('now') /*--}}
+{{--*/ $i=1; $fechaHoy = date_create('now'); /*--}}
 <br>
 @foreach($cursosFiltrados as $curso)
     <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 cuadroCurso">
         <div class="col-md-11 col-md-offset-1 cuadro box">
             <div class="btnCurso" style="position: absolute; right:15px; bottom: 15px; z-index:4;"><a href="http://mx.mexicox.gob.mx/courses/{{$curso->id_curso}}/about"><img style="width:7%;" class="pull-right" src="{{asset('img/botonIrCurso.png')}}" ></a></div>
             <div class="col-md-6 col-sm-6 col-lg-5 col-xs-6 imgCurso">
-                <img class="foto pull-left img-responsive" src="http://mx.mexicox.gob.mx{{$curso->thumbnail}}">
+            {{--*/ $var1 = "img//miniaturaCurso//".substr($curso->thumbnail,1) /*--}}
+                @if(file_exists($var1))
+                    <img class="foto pull-left img-responsive" src="{{$var1}}">
+                @else
+                    <img class="foto pull-left img-responsive" src="http://mx.mexicox.gob.mx{{$curso->thumbnail}}">
+                @endif
             </div>
             <div class="col-md-6 col-sm-6 col-lg-7 col-xs-6" style="padding-left:2%; padding-right: 6%; z-index:2;">
                 @if(strlen($curso->nombreCurso) < 60)
