@@ -94,7 +94,7 @@ class MexicoxController extends Controller {
             WHERE b.institucion = '" . $institucion . "'" . $condicionCat . " AND b.course_id is not null
             AND a.end ".$condicionPeriodo."
             AND trim(b.course_id)!='' AND b.activo=1 GROUP BY b.course_id ORDER BY a.start DESC;");
-        return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
+        return view('viewHome2017/cursosTresCols')->with('cursosFiltrados', $cursosRecientes);
     }
     
     /*  *****   Consulta instituciones con cursos al seleccionar una categoría en el menú principal *****    */
@@ -128,7 +128,7 @@ class MexicoxController extends Controller {
             WHERE b.course_id is not null AND TRIM(b.course_id)!='' AND b.activo=1 
             AND a.end ".$condicionPeriodo."
             AND MATCH(a.display_name,a.short_description) AGAINST('".$termino."') ORDER BY a.start DESC;");
-		return view('viewHome2017/muestraCursos')->with('cursosFiltrados', $cursosRecientes);
+		return view('viewHome2017/cursosTresCols')->with('cursosFiltrados', $cursosRecientes);
     }
     
     public function blog(){
