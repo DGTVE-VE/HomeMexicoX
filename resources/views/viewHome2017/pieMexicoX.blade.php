@@ -22,26 +22,26 @@
 </ul>  
 <div class="col-lg-1 col-md-2 col-sm-4 col-xs-6">
     <a href="http://www.gob.mx/sep">
-        <img src="img/sep.png" alt="Secretaría de Educación Pública" class="alturaImg">
+        <img src="{{url('img/sep.png')}}" alt="Secretaría de Educación Pública" class="alturaImg">
     </a>
 </div>
 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
     <center>
         <a href="https://www.gob.mx/mexicodigital/">
-            <img src="img/mexico_digital.png" alt="México Digital" class="imgMexDig">
+            <img src="{{url('img/mexico_digital.png')}}" alt="México Digital" class="imgMexDig">
         </a>
     </center>
 </div>
 <div class="visible-xs col-xs-12 division"></div>
 <div class="col-lg-1 col-md-2 col-sm-4 col-xs-6">
     <a href="http://www.televisioneducativa.gob.mx/">
-        <img src="img/dgtve.png" alt="Televisión Educativa" class="alturaImg">
+        <img src="{{url('img/dgtve.png')}}" alt="Televisión Educativa" class="alturaImg">
     </a>
 </div>
 <div class="visible-sm col-sm-12 division"></div>
 <div class="col-lg-1 col-md-2 col-sm-4 col-xs-6">
     <a href="http://mexicox.gob.mx/">
-        <img src="img/mexicox.png" alt="MéxicoX" class="imgMexicoX">
+        <img src="{{url('img/mexicox.png')}}" alt="MéxicoX" class="imgMexicoX">
     </a>
 </div>
 <div class="visible-xs col-xs-12 division"></div>
@@ -55,7 +55,7 @@
 </div>
 <div class="col-lg-1 col-md-2 col-sm-4 col-xs-6">
     <a href="http://groups.itu.int/stocktaking/WSISPrizes/WSISPrizes2016.aspx#home">
-        <img src="img/logo-swis.png" alt="Premio WSIS" class="alturaImg">
+        <img src="{{url('img/logo-swis.png')}}" alt="Premio WSIS" class="alturaImg">
     </a>
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

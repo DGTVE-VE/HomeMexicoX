@@ -26,6 +26,10 @@ class MexicoxController extends Controller {
         return redirect('http://mx.mexicox.gob.mx/login');
     }
 
+    public function muestraTutorial() {
+        return view('viewHome2017/videoTutorial');
+    }
+    
     /*  *****   Filtra cursos por categoria en clic de categorias de menu principal ****    */
     public function filtroCursos($categoria, $periodo) {
         $fechaHoy = date_format(date_create('now'), 'Y-m-d');
