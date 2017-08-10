@@ -34,6 +34,7 @@ MéxicoX
         border:solid 2px;
     }
 </style>
+
 <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >        
         <a href="#tutoriales"><h3>Tutoriales</h3></a>
@@ -46,84 +47,98 @@ MéxicoX
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6" id="selectInstitucion" style="padding-top:10px; padding-bottom:5px;"></div>
 </div>
-    <div class="col-md-12">
-        <article>
-            <button type="button" class="close" style="color: red;">&times</button><br>
-            <h5 class="text-justify">Si deseas realizar tu servicio social o prácticas profesionales de forma presencial, MéxicoX es el lugar para ti.
-                Necesitamos personas proactivas, con entusiasmo y ganas de formar parte de un gran equipo.
-            </h5>
-            <h5 class="text-center">Para mayores Informes puedes consultar <a class="linkcolor" href="http://mx.mexicox.gob.mx/donate">  Informes Servicio Social</a></h5>
-        </article>
-    </div>
+<!--<div class="col-md-12">
+            <article>
+    
+                <h5 class="text-justify">
+                    <button type="button" class="close" style="color: red;">&times</button><br>
+                    Si deseas realizar tu servicio social o prácticas profesionales de forma presencial, MéxicoX es el lugar para ti.
+                    Necesitamos personas proactivas, con entusiasmo y ganas de formar parte de un gran equipo.
+                </h5>
+                <h5 class="text-center">Para mayores Informes puedes consultar <a class="linkcolor" href="http://mx.mexicox.gob.mx/donate">  Informes Servicio Social</a></h5>
+    
+            </article>
+    <article>
+        <h4>Aviso Importante sobre el Diplomado <br> "Presupuesto Basado en Resultados PBR"
+        </h4>
+        <p style="text-align: justify;">
+            Si fuiste seleccionado para tomar el Diplomado PBR y no puedes visualizar el curso o requieres modificación de correo principal, favor de enviar correo a
+            <label class="linkcolor">  soporte@planeacion.unam.mx </label>. Si presentas dudas con respecto a la desmatriculación y segunda fase de inscripción, favor de enviar correo a
+            <label class="linkcolor"> capacitacion_ued@hacienda.gob.mx</label>          <br>
+            <button class="close" style="color: white;">X</button>  
+        </p>
+    </article>
+</div>-->
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div id="contenedorCursos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 
     <!--div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
         <div class="col-lg 12 col-md-12 col-sm-12 col-xs-12" style="padding:30px;"></div>
-        <!--Tutoriales-->
-        <!--div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Tutoriales</h3>
-            </div>   
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
-                        <div class="col-xs-10">
-                            Tutorial 1
-                        </div>
-                        <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
+    <!--Tutoriales-->
+    <!--div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tutorieals</h3>
+        </div>   
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
+                    <div class="col-xs-10">
+                        Tutorial 1
                     </div>
-                    <div id="detail-1">
-                        <hr></hr>
-                        <div class="container">
-                            <div class="fluid-row">
-                                <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
-                        <div class="col-xs-10">
-                            Tutorial 2
-                        </div>
-                        <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
-                    </div>
-                    <div id="detail-2">
-                        <hr></hr>
-                        <div class="container">
-                            <div class="fluid-row">
-                                <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                            </div>
+                    <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                <div id="detail-1">
+                    <hr></hr>
+                    <div class="container">
+                        <div class="fluid-row">
+                            <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                         </div>
                     </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
-                        <div class="col-xs-10">
-                            Tutorial 3
-                        </div>
-                        <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-2" data-toggle="detail-2">
+                    <div class="col-xs-10">
+                        Tutorial 2
                     </div>
-                    <div id="detail-3">
-                        <hr></hr>
-                        <div class="container">
-                            <div class="fluid-row">
-                                <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                            </div>
+                    <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                <div id="detail-2">
+                    <hr></hr>
+                    <div class="container">
+                        <div class="fluid-row">
+                            <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                         </div>
                     </div>
-                </li>
-            </ul>
-        </div-->
-        <!--Video Promocional-->
-        <!--div class="fb-video" data-href="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/" data-width="420" data-show-text="false"><blockquote cite="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/">
-            ¿Quiénes somos?</a><p>¿Conoces todos nuestros servicios educativos? Somos la #SeñalDeConocimiento http://www.televisioneducativa.gob.mx/</p>
-            Posted by <a href="https://www.facebook.com/TvEducativaMx/">Televisión Educativa Mx</a> el viernes, 19 de mayo de 2017</blockquote></div>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:40px;"></div>
-        <!--FB. Compartir-->
-        <!--div class="fb-share-button" data-href="http://mexicox.gob.mx/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmexicox.gob.mx%2F&amp;src=sdkpreparse">Compartir</a></div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row toggle" id="dropdown-detail-3" data-toggle="detail-3">
+                    <div class="col-xs-10">
+                        Tutorial 3
+                    </div>
+                    <div class="col-xs-2"><i class="fa fa-chevron-down pull-right"></i></div>
+                </div>
+                <div id="detail-3">
+                    <hr></hr>
+                    <div class="container">
+                        <div class="fluid-row">
+                            <iframe src="https://embed.ted.com/talks/rita_pierson_every_kid_needs_a_champion" width="300" height="220" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div-->
+    <!--Video Promocional-->
+    <!--div class="fb-video" data-href="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/" data-width="420" data-show-text="false"><blockquote cite="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/TvEducativaMx/videos/1457472757644895/">
+        ¿Quiénes somos?</a><p>¿Conoces todos nuestros servicios educativos? Somos la #SeñalDeConocimiento http://www.televisioneducativa.gob.mx/</p>
+        Posted by <a href="https://www.facebook.com/TvEducativaMx/">Televisión Educativa Mx</a> el viernes, 19 de mayo de 2017</blockquote></div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:40px;"></div>
+    <!--FB. Compartir-->
+    <!--div class="fb-share-button" data-href="http://mexicox.gob.mx/" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmexicox.gob.mx%2F&amp;src=sdkpreparse">Compartir</a></div>
+</div-->
+
     <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >
             <h3 id="tutoriales" class="">Tutoriales </h3>
@@ -159,12 +174,12 @@ MéxicoX
 </div>
 <script src="{{asset('js/mexicoxInicio.js')}}"></script>
 <script>
-            /*   *****  mostrar cursos recientes   *****   */
-            llenaCursos("{{url('Home2017/filtrarCurso/0/0')}}", "{{csrf_token()}}", 0);
-            /*   *****  mostrar cursos archivados   *****   */
-            llenaCursos("{{url('Home2017/filtrarCurso/0/1')}}", "{{csrf_token()}}", 1);
-            /*  *****   Llenar lista de instituciones   *****   */
-            llenaInstituciones("{{url('Home2017/obtenerInstitucion/0')}}", "{{csrf_token()}}");
+/*   *****  mostrar cursos recientes   *****   */
+llenaCursos("{{url('Home2017/filtrarCurso/0/0')}}", "{{csrf_token()}}", 0);
+/*   *****  mostrar cursos archivados   *****   */
+llenaCursos("{{url('Home2017/filtrarCurso/0/1')}}", "{{csrf_token()}}", 1);
+/*  *****   Llenar lista de instituciones   *****   */
+llenaInstituciones("{{url('Home2017/obtenerInstitucion/0')}}", "{{csrf_token()}}");
 </script>
 <script>
     $(document).ready(function () {
@@ -178,11 +193,11 @@ MéxicoX
 
 
 //        $("#modalInf").modal("show");
-        $("article").slideToggle("slow");
-
-    $('.close').click(function () {
-        $("article").slideToggle("slow");
-    });
+//    $("article").slideToggle("slow");
+//
+//    $('.close').click(function () {
+//        $("article").slideToggle("slow");
+//    });
 
 </script>
 @endsection
