@@ -22,7 +22,7 @@ Route::post('Home2017/filtrarCurso/{categoria}/{archivado}','MexicoxController@f
 Route::post('Home2017/obtenerInstitucion/{categoria}','MexicoxController@obtenerInstituciones');
 Route::post('Home2017/cursosInstitucion','MexicoxController@cursosInstitucion');
 Route::post('Home2017/buscaCurso', 'MexicoxController@buscar');
-Route::any('Home2017/Tutoriales', 'MexicoxController@muestraTutorial');
+Route::any('Home2017/Tutoriales/{numVidTutor}', 'MexicoxController@muestraTutorial');
 
 Route::get('blog', 'MexicoxController@blog');
 Route::any('viewblog', 'MexicoxController@viewblog');

@@ -14,8 +14,11 @@ MéxicoX
     .paddLinkTutor{
         padding:50px;
     }
+    .separaVideo{
+        margin-top:25px;
+    }
 </style>
-<link rel="stylesheet" href="{{asset('css/encabezado.css')}}"/>
+<link rel="stylesheet" href="{{asset('css/encabezados.css')}}"/>
 <nav class="navbar navbar-default navbar-fixed-top barra">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -43,13 +46,13 @@ MéxicoX
             <h3 class="">Tutoriales </h3>
         </div>
     </div>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 separaVideo">
         <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
             <video width="100%" height="100%" controls>
-                <source src="{{url('video/tutorial1.mp4')}}" type="video/mp4">
+                <source src="{{url($archivoVideo)}}" type="video/mp4">
                 Tu navegador no soporta el reproductor de video de HTML5.
             </video>
-            <h3 class="text-center">Tutorial 1: Registrese</h3>
+            <h3 class="text-center">Tutorial {{$textoEtiqueta}}</h3>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
     </div>
@@ -63,25 +66,25 @@ MéxicoX
             <h4>Tutorial 1: Guia detallada sobre como obtener un registro en la plataforma MéxicoX.</h4>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 paddLinkTutor">
-            <a href="{{url('Home2017/Tutoriales')}}"><img src="{{asset('img/thumbnailTutorial/T1.jpg')}}" class="img-responsive img-thumbnail"/></a>
+            <a href="{{url('Home2017/Tutoriales/1')}}"><img src="{{asset('img/thumbnailTutorial/T1.jpg')}}" class="img-responsive img-thumbnail"/></a>
         </div>
         <div class="col-lg-4 col-md-3 col-sm-6 col-xs-6 margenTxtTuto">
             <h4>Tutorial 2: Tutorial que indica paso a paso como activar su cuenta de MéxicoX</h4>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 paddLinkTutor">
-            <a href="{{url('Home2017/Tutoriales')}}"><img src="{{asset('img/thumbnailTutorial/T2.jpg')}}" class="img-responsive img-thumbnail"/></a>
+            <a href="{{url('Home2017/Tutoriales/2')}}"><img src="{{asset('img/thumbnailTutorial/T2.jpg')}}" class="img-responsive img-thumbnail"/></a>
         </div>
         <div class="col-lg-4 col-md-3 col-sm-6 col-xs-6 margenTxtTuto">
             <h4>Tutorial 3: Descripción general sobre como Iniciar Sesión en MéxicoX</h4>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 paddLinkTutor">
-            <a href="{{url('Home2017/Tutoriales')}}"><img src="{{asset('img/thumbnailTutorial/T3.jpg')}}" class="img-responsive img-thumbnail"/></a>
+            <a href="{{url('Home2017/Tutoriales/3')}}"><img src="{{asset('img/thumbnailTutorial/T3.jpg')}}" class="img-responsive img-thumbnail"/></a>
         </div>
         <div class="col-lg-4 col-md-3 col-sm-6 col-xs-6 margenTxtTuto">
             <h4>Tutorial 4: Instrucciones detalladas sobre como inscribirse a un curso de MéxicoX</h4>
         </div>
         <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 paddLinkTutor">
-            <a href="{{url('Home2017/Tutoriales')}}"><img src="{{asset('img/thumbnailTutorial/T4.jpg')}}" class="img-responsive img-thumbnail"/></a>
+            <a href="{{url('Home2017/Tutoriales/4')}}"><img src="{{asset('img/thumbnailTutorial/T4.jpg')}}" class="img-responsive img-thumbnail"/></a>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
     </div>

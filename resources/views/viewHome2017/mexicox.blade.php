@@ -146,16 +146,16 @@ MéxicoX
     </div>
     <div id="contenedorTutoriales" class="col-lg-offset-1 col-lg-10 col-md-12 col-sm-12 col-xs-12">
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 paddingImgTutor">
-            <a href="{{url('Home2017/Tutoriales')}}"><img src="{{asset('img/thumbnailTutorial/T1.jpg')}}" class="img-responsive marcoImg img-thumbnail img-rounded"/></a>
+            <a href="{{url('Home2017/Tutoriales/1')}}" target="_blank"><img src="{{asset('img/thumbnailTutorial/T1.jpg')}}" class="img-responsive marcoImg img-thumbnail img-rounded"/></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 paddingImgTutor">
-            <a href="{{url('Home2017/Tutoriales')}}"><img src="{{asset('img/thumbnailTutorial/T2.jpg')}}" class="img-responsive marcoImg img-thumbnail img-rounded"/></a>
+            <a href="{{url('Home2017/Tutoriales/2')}}" target="_blank"><img src="{{asset('img/thumbnailTutorial/T2.jpg')}}" class="img-responsive marcoImg img-thumbnail img-rounded"/></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 paddingImgTutor">
-            <a href="{{url('Home2017/Tutoriales')}}"><img src="{{asset('img/thumbnailTutorial/T3.jpg')}}" class="img-responsive marcoImg img-thumbnail img-rounded"/></a>
+            <a href="{{url('Home2017/Tutoriales/3')}}" target="_blank"><img src="{{asset('img/thumbnailTutorial/T3.jpg')}}" class="img-responsive marcoImg img-thumbnail img-rounded"/></a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 paddingImgTutor">
-            <a href="{{url('Home2017/Tutoriales')}}"><img src="{{asset('img/thumbnailTutorial/T4.jpg')}}" class="img-responsive marcoImg img-thumbnail img-rounded"/></a>
+            <a href="{{url('Home2017/Tutoriales/4')}}" target="_blank"><img src="{{asset('img/thumbnailTutorial/T4.jpg')}}" class="img-responsive marcoImg img-thumbnail img-rounded"/></a>
         </div>
     </div>
     <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">

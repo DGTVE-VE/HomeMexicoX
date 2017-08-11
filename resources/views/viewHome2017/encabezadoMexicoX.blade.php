@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset('css/encabezado.css')}}"/>
+<link rel="stylesheet" href="{{asset('css/encabezados.css')}}"/>
     {{--*/ $urlBusuqeda = url('Home2017/buscaCurso') /*--}}
 <nav class="navbar navbar-default navbar-fixed-top barra">
     <div class="navbar-header">

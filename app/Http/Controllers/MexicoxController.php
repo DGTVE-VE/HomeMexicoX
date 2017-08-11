@@ -26,8 +26,26 @@ class MexicoxController extends Controller {
         return redirect('http://mx.mexicox.gob.mx/login');
     }
 
-    public function muestraTutorial() {
-        return view('viewHome2017/videoTutorial');
+    public function muestraTutorial($numVideo) {
+        $archivoVideo = "video/tutorial".$numVideo.".mp4";
+        switch($numVideo){
+            case 1:
+                $textoEtiqueta = $numVideo.": Registrate";
+                break;
+            case 2:
+                $textoEtiqueta = $numVideo.": Activa tu cuenta";
+                break;
+            case 3:
+                $textoEtiqueta = $numVideo.": Inicia sesión";
+                break;
+            case 4:
+                $textoEtiqueta = $numVideo.": Inscribete a un curso";
+                break;
+            default:
+                $textoEtiqueta = "1: Registrate";
+                break;
+        }
+        return view('viewHome2017/videoTutorial')->with('archivoVideo',$archivoVideo)->with('textoEtiqueta',$textoEtiqueta);
     }
     
     /*  *****   Filtra cursos por categoria en clic de categorias de menu principal ****    */

@@ -32,6 +32,7 @@
     }
 	.logoPrincipal{
 		margin-left:10px;
+        height: 45px;
 	}
     @media(max-width:767px){
         .esquinaDerecha{
