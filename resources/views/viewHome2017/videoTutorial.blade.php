@@ -11,8 +11,15 @@ MéxicoX
     .margenTxtTuto{
         padding-top:8%;
     }
-    .paddLinkTutor{
-        padding:50px;
+    @media(min-width:767px){
+        .paddLinkTutor{
+            padding:50px;
+        }
+    }
+    @media(max-width:767px){
+        .paddLinkTutor{
+            padding:15px;
+        }
     }
     .separaVideo{
         margin-top:25px;
@@ -62,28 +69,31 @@ MéxicoX
         </div>
     </div>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-6 margenTxtTuto">
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 margenTxtTuto">
             <h4>Tutorial 1: Guia detallada sobre como obtener un registro en la plataforma MéxicoX.</h4>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 paddLinkTutor">
+        <div class="col-lg-2 col-md-3 col-sm-offset-0 col-sm-6 col-xs-offset-3 col-xs-6 paddLinkTutor">
             <a href="{{url('Home2017/Tutoriales/1')}}"><img src="{{asset('img/thumbnailTutorial/T1.jpg')}}" class="img-responsive img-thumbnail"/></a>
         </div>
-        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-6 margenTxtTuto">
+        <div class="hidden-lg hidden-md col-sm-12 col-xs-12"></div>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 margenTxtTuto">
             <h4>Tutorial 2: Tutorial que indica paso a paso como activar su cuenta de MéxicoX</h4>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 paddLinkTutor">
+        <div class="col-lg-2 col-md-3 col-sm-offset-0 col-sm-6 col-xs-offset-3 col-xs-6 paddLinkTutor">
             <a href="{{url('Home2017/Tutoriales/2')}}"><img src="{{asset('img/thumbnailTutorial/T2.jpg')}}" class="img-responsive img-thumbnail"/></a>
         </div>
-        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-6 margenTxtTuto">
+        <div class="hidden-lg hidden-md col-sm-12 col-xs-12"></div>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 margenTxtTuto">
             <h4>Tutorial 3: Descripción general sobre como Iniciar Sesión en MéxicoX</h4>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 paddLinkTutor">
+        <div class="col-lg-2 col-md-3 col-sm-offset-0 col-sm-6 col-xs-offset-3 col-xs-6 paddLinkTutor">
             <a href="{{url('Home2017/Tutoriales/3')}}"><img src="{{asset('img/thumbnailTutorial/T3.jpg')}}" class="img-responsive img-thumbnail"/></a>
         </div>
-        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-6 margenTxtTuto">
+        <div class="hidden-lg hidden-md col-sm-12 col-xs-12"></div>
+        <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 margenTxtTuto">
             <h4>Tutorial 4: Instrucciones detalladas sobre como inscribirse a un curso de MéxicoX</h4>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 paddLinkTutor">
+        <div class="col-lg-2 col-md-3 col-sm-offset-0 col-sm-6 col-xs-offset-3 col-xs-6 paddLinkTutor">
             <a href="{{url('Home2017/Tutoriales/4')}}"><img src="{{asset('img/thumbnailTutorial/T4.jpg')}}" class="img-responsive img-thumbnail"/></a>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
