@@ -3,7 +3,13 @@
 @foreach($cursosFiltrados as $curso)
     <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12 cuadroCurso">
         <div class="col-md-11 col-md-offset-1 cuadro box">
-            <div class="btnCurso" style="position: absolute; right:15px; bottom: 15px; z-index:4;"><a href="http://mx.mexicox.gob.mx/courses/{{$curso->id_curso}}/about"><img style="width:7%;" class="pull-right" src="{{asset('img/botonIrCurso.png')}}" ></a></div>
+            <div class="btnCurso" style="position: absolute; right:15px; bottom: 15px; z-index:4;">
+              @if($curso->id_curso == "course-v1:CONCAMIN-TECNM+CVI217101X+2017_10")
+                <a href="http://www.catedrainnovatic.mx/register">
+              @else
+                <a href="http://mx.mexicox.gob.mx/courses/{{$curso->id_curso}}/about">
+              @endif
+                <img style="width:7%;" class="pull-right" src="{{asset('img/botonIrCurso.png')}}" ></a></div>
             <div class="col-md-6 col-sm-6 col-lg-5 col-xs-6 imgCurso">
                 <img class="foto pull-left img-responsive" src="http://mx.mexicox.gob.mx{{$curso->thumbnail}}">
             </div>
@@ -13,7 +19,7 @@
                 @else
                     <div class="caption tituloCurso text-uppercase"><br>{{substr($curso->nombreCurso, 0, 60).'...'}}</div>
                 @endif
-                <div class="caption tituloCurso"> Imparte: 
+                <div class="caption tituloCurso"> Imparte:
                     <strong><span class="text-uppercase" data-toggle="tooltip" data-placement="bottom" title="{{$curso->nombre_institucion}}">{{$curso->institucion}}</span></strong>
                 </div>
                 @if($fechaHoy < date_create($curso->inicioInscripcion))
