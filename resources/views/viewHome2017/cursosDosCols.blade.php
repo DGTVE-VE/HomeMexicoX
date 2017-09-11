@@ -5,7 +5,7 @@
         <div class="col-md-11 col-md-offset-1 cuadro box">
             <div class="btnCurso" style="position: absolute; right:15px; bottom: 15px; z-index:4;">
               @if($curso->id_curso == "course-v1:CONCAMIN-TECNM+CVI217101X+2017_10")
-                <a href="http://www.catedrainnovatic.mx/register">
+                <a href="http://www.catedrainnovatic.mx/register" target="_blank">
               @else
                 <a href="http://mx.mexicox.gob.mx/courses/{{$curso->id_curso}}/about">
               @endif
