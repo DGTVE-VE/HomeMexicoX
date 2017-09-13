@@ -47,7 +47,8 @@ MéxicoX
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6" id="selectInstitucion" style="padding-top:10px; padding-bottom:5px;"></div>
 </div>
-<!--<div class="col-md-12">
+<div class="col-md-12">
+    <!--
             <article>
     
                 <h5 class="text-justify">
@@ -58,17 +59,20 @@ MéxicoX
                 <h5 class="text-center">Para mayores Informes puedes consultar <a class="linkcolor" href="http://mx.mexicox.gob.mx/donate">  Informes Servicio Social</a></h5>
     
             </article>
+-->
     <article>
-        <h4>Aviso Importante sobre el Diplomado <br> "Presupuesto Basado en Resultados PBR"
+        <h4>Aviso Importante
         </h4>
         <p style="text-align: justify;">
-            Si fuiste seleccionado para tomar el Diplomado PBR y no puedes visualizar el curso o requieres modificación de correo principal, favor de enviar correo a
-            <label class="linkcolor">  soporte@planeacion.unam.mx </label>. Si presentas dudas con respecto a la desmatriculación y segunda fase de inscripción, favor de enviar correo a
-            <label class="linkcolor"> capacitacion_ued@hacienda.gob.mx</label>          <br>
+        Le informamos que debido al éxito que tuvo el curso de 
+“Prevenir, atender y sancionar el acoso y hostigamiento sexual. ¡Conoce el protocolo!”
+la entrega de constancias demorara un poco,  se podrá descargar en las próximas 72 horas
+a partir hoy. Le sugerimos estar al pendiente de su cuenta en MéxicoX y de su correo
+electrónico ya que le llegará una notificación informando la disponibilidad de la descarga.
             <button class="close" style="color: white;">X</button>  
         </p>
     </article>
-</div>-->
+</div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div id="contenedorCursos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 
@@ -192,12 +196,12 @@ llenaInstituciones("{{url('Home2017/obtenerInstitucion/0')}}", "{{csrf_token()}}
     });
 
 
-//        $("#modalInf").modal("show");
-//    $("article").slideToggle("slow");
-//
-//    $('.close').click(function () {
-//        $("article").slideToggle("slow");
-//    });
+        $("#modalInf").modal("show");
+    $("article").slideToggle("slow");
+
+    $('.close').click(function () {
+        $("article").slideToggle("slow");
+    });
 
 </script>
 @endsection
