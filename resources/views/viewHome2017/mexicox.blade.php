@@ -66,7 +66,7 @@ MéxicoX
         <p style="text-align: justify;">
         Le informamos que debido al éxito que tuvo el curso de 
 “Prevenir, atender y sancionar el acoso y hostigamiento sexual. ¡Conoce el protocolo!”
-la entrega de constancias demorara un poco,  se podrá descargar en las próximas 72 horas
+la entrega de constancias demorará un poco,  se podrá descargar en las próximas 72 horas
 a partir hoy. Le sugerimos estar al pendiente de su cuenta en MéxicoX y de su correo
 electrónico ya que le llegará una notificación informando la disponibilidad de la descarga.
             <button class="close" style="color: white;">X</button>  
