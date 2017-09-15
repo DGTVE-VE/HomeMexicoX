@@ -13,9 +13,9 @@ MéxicoX
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <h2 class="text-center">Aviso Importante</h2>
-            <div class="modal-body modal-sm">            
+            <div class="modal-body modal-sm">
                 <h3 class="text-justify col-md-6">Por razones de mantenimiento la plataforma estará sin servicio el viernes 19 de mayo de 2017. Tome sus precauciones.
-                </h3>                
+                </h3>
                 <img class="col-md-6" src="img/mantenimiento.png">
             </div>
             <div class="modal-footer">
@@ -36,10 +36,10 @@ MéxicoX
 </style>
 
 <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >        
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >
         <a href="#tutoriales"><h3>Tutoriales</h3></a>
     </div>
-    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >        
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >
         <h3 class="">CURSOS</h3>
     </div>
     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -47,32 +47,32 @@ MéxicoX
     </div>
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6" id="selectInstitucion" style="padding-top:10px; padding-bottom:5px;"></div>
 </div>
-<div class="col-md-12">
+<!-- <div class="col-md-12"> -->
     <!--
             <article>
-    
+
                 <h5 class="text-justify">
                     <button type="button" class="close" style="color: red;">&times</button><br>
                     Si deseas realizar tu servicio social o prácticas profesionales de forma presencial, MéxicoX es el lugar para ti.
                     Necesitamos personas proactivas, con entusiasmo y ganas de formar parte de un gran equipo.
                 </h5>
                 <h5 class="text-center">Para mayores Informes puedes consultar <a class="linkcolor" href="http://mx.mexicox.gob.mx/donate">  Informes Servicio Social</a></h5>
-    
+
             </article>
 -->
-    <article>
+    <!-- <article>
         <h4>Aviso Importante
         </h4>
         <p style="text-align: justify;">
-        Le informamos que debido al éxito que tuvo el curso de 
+        Le informamos que debido al éxito que tuvo el curso de
 “Prevenir, atender y sancionar el acoso y hostigamiento sexual. ¡Conoce el protocolo!”
 la entrega de constancias demorará un poco,  se podrá descargar en las próximas 72 horas
 a partir hoy. Le sugerimos estar al pendiente de su cuenta en MéxicoX y de su correo
 electrónico ya que le llegará una notificación informando la disponibilidad de la descarga.
-            <button class="close" style="color: white;">X</button>  
+            <button class="close" style="color: white;">X</button>
         </p>
-    </article>
-</div>
+    </article> -->
+<!-- </div> -->
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div id="contenedorCursos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </div>
 
@@ -82,7 +82,7 @@ electrónico ya que le llegará una notificación informando la disponibilidad d
     <!--div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">Tutorieals</h3>
-        </div>   
+        </div>
         <ul class="list-group">
             <li class="list-group-item">
                 <div class="row toggle" id="dropdown-detail-1" data-toggle="detail-1">
@@ -163,9 +163,9 @@ electrónico ya que le llegará una notificación informando la disponibilidad d
         </div>
     </div>
     <div class="barraGuia col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >        
+        <div class="col-lg-1 col-md-2 col-sm-2 col-xs-12" >
             <h3 class="">CURSOS</h3>
-        </div>      
+        </div>
         <div class="col-lg-8 col-md-7 col-sm-7 col-xs-12">
             <h3 class="">Archivados </h3>
         </div>
